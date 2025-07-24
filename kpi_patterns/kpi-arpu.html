@@ -18,6 +18,15 @@
   gtag('config', 'G-0V3TFLKV37');
 </script>
 
+<!-- Prism.js syntax highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<!-- Language plugins (add more as needed) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dax.min.js"></script>
+
+
 </head>
 <body>
 
@@ -59,14 +68,28 @@
     DIVIDE(
         SUM(Sales[Revenue]),
         DISTINCTCOUNT(Sales[UserID])
-    )
-          </code></pre>
+    )          </code></pre>
         <div class="toolbar">
           <button class="copy-button" onclick="copyCode(this)">Copy</button>
           <button class="conventions-button" onclick="showConventions()">Conventions</button>
         </div>
       </div>
     </section>
+
+<section class="kpi-section">
+  <h3>SQL Statement</h3>
+  <div class="code-toolbar">
+    <pre><code class="language-sql">SELECT 
+  SUM(Revenue) * 1.0 / COUNT(DISTINCT UserID) AS ARPU
+FROM 
+  Sales
+WHERE 
+  Revenue IS NOT NULL AND UserID IS NOT NULL;    </code></pre>
+    <div class="toolbar">
+      <button class="copy-button" onclick="copyCode(this)">Copy</button>
+    </div>
+  </div>
+</section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>

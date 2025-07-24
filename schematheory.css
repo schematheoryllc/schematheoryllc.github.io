@@ -193,6 +193,7 @@ nav ul li a {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  
   margin-top: 1rem;
 }
 
@@ -280,6 +281,7 @@ footer {
 .code-toolbar pre {
   margin: 0;
   overflow: auto;
+  
 }
 
 .toolbar {
