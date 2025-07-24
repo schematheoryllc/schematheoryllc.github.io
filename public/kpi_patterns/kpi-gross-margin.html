@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn how to calculate and use the Gross Margin Percentage KPI with examples, formulas, and downloadable resources.">
+  <title>KPI: Gross Margin % | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Schema Theory LLC</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html"><b>Home</b></a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+
+    <h2>Gross Margin %</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Gross Margin % measures the proportion of revenue that exceeds the cost of goods sold (COGS). It indicates how efficiently a company produces and sells its products and is a key profitability metric.</p>
+      <p><strong>Formula:</strong> (Revenue - COGS) / Revenue</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-gross-margin.png" alt="Gross Margin Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Formula</h3>
+      <pre><code>
+Gross Margin % = 
+DIVIDE(
+    SUM(Sales[Revenue]) - SUM(Sales[COGS]),
+    SUM(Sales[Revenue])
+)
+      </code></pre>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>Use time-based filters (e.g., Date, Month, Year) to evaluate margin trends over time.</li>
+        <li>Pair with product, region, or channel dimensions to identify high- or low-margin segments.</li>
+        <li>Ensure Revenue and COGS are captured consistently per transaction to avoid calculation distortions.</li>
+        <li>Consider supplementing with net margin or contribution margin for broader profitability analysis.</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/gross_margin_sample.csv" class="button">Download Sample CSV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

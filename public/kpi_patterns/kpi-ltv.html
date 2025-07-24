@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn how to calculate and use the Customer Lifetime Value (LTV) KPI with examples, formulas, and downloadable resources.">
+  <title>KPI: Customer Lifetime Value (LTV) | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Schema Theory LLC</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+
+    <h2>Customer Lifetime Value (LTV)</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Customer Lifetime Value (LTV) estimates the total revenue a business expects from a customer over the entire duration of their relationship. It helps businesses understand long-term profitability per customer and make informed marketing, sales, and product investment decisions.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-ltv.png" alt="LTV Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Formula</h3>
+      <pre><code>
+LTV = 
+CALCULATE(
+    DIVIDE(
+        SUMX(
+            VALUES(Customer[CustomerID]),
+            CALCULATE(SUM(Sales[Revenue]))
+        ),
+        DISTINCTCOUNT(Customer[CustomerID])
+    ),
+    REMOVEFILTERS(Date)
+)
+      </code></pre>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>Use REMOVEFILTERS(Date) to include all customer history in the calculation, regardless of date filters on visuals.</li>
+        <li>Segment by acquisition cohort to compare LTV trends over time or by channel.</li>
+        <li>For fixed periods like 12-month or 3-year LTV, apply a DATESINPERIOD filter.</li>
+        <li>Pair LTV with CAC to measure customer profitability and marketing effectiveness.</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-ltv.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-ltv_customers.csv" class="button">Download Customers CSV</a>
+        <a href="../assets/downloads/kpi-ltv_sales.csv" class="button">Download Sales CSV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

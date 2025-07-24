@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn how to calculate and use the Average Revenue Per User (ARPU) KPI with examples, formulas, and downloadable resources.">
+  <title>KPI: Average Revenue Per User (ARPU) | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Schema Theory LLC</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Main KPI Content -->
+  <main class="kpi-main container">
+   <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+
+    <h2>Average Revenue Per User (ARPU)</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>This KPI measures the average revenue generated per user over a specific period, commonly used in subscription-based businesses.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-arpu.png" alt="ARPU Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Formula</h3>
+      <pre><code>
+ARPU = 
+DIVIDE(
+    SUM(Sales[Revenue]),
+    DISTINCTCOUNT(Sales[UserID])
+)
+      </code></pre>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>Ensure the <code>Sales</code> table includes a <code>Revenue</code> column and a <code>UserID</code> column.</li>
+        <li>The formula calculates ARPU based on unique users who generated revenue during the period.</li>
+        <li>Filter the data to include only transactions within the desired time period (e.g., monthly ARPU).</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-arpu.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-arpu.mstr" class="button">Download MSTR</a>        
+        <a href="../assets/downloads/kpi-arpu.csv" class="button">Download Sample Data</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Schema Theory. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Schema Theory LLC</title>
+    <link href="schematheory.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Schema Theory LLC</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+        <h1>KPI Pattern Library</h1>
+
+        <p>
+          This page provides visual examples, formulas, and downloads for common KPIs used in tools like Power BI, SQL, and MicroStrategy.
+        </p>
+
+        <h2>Financial KPIs</h2>
+        <ul>
+          <li><a href="kpi_patterns/kpi-arpu.html">ARPU (Average Revenue per User)</a></li>
+          <li><a href="kpi_patterns/kpi-cac.html">Customer Acquisition Cost (CAC)</a></li>
+          <li><a href="kpi_patterns/kpi-ltv.html">Customer Lifetime Value (LTV)</a></li>
+          <li><a href="kpi_patterns/kpi-gross-margin.html">Gross Margin %</a></li>
+          <li><a href="kpi_patterns/kpi-mrr.html">Monthly Recurring Revenue (MRR)</a></li>
+          <li><a href="kpi_patterns/kpi-ytd-sales.html">YTD Sales by Region</a></li>
+        </ul>
+
+        <h2>Customer KPIs</h2>
+        <ul>
+          <li><a href="kpi_patterns/kpi-churn-rate.html">Customer Churn Rate (%)</a></li>
+          <li><a href="kpi_patterns/kpi-nps.html">Net Promoter Score (NPS)</a></li>
+        </ul>
+
+        <h2>Operational KPIs</h2>
+        <ul>
+          <li><a href="kpi_patterns/kpi-resolution-time.html">Average Resolution Time</a></li>
+          <li><a href="kpi_patterns/kpi-conversion-rate.html">Conversion Rate</a></li>
+        </ul>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Schema Theory LLC
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

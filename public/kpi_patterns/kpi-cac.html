@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn how to calculate and use the Customer Acquisition Cost (CAC) KPI with examples, formulas, and downloadable resources.">
+  <title>KPI: Customer Acquisition Cost (CAC) | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Schema Theory LLC</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+
+    <h2>Customer Acquisition Cost (CAC)</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Customer Acquisition Cost (CAC) measures the average cost of acquiring a new customer over a defined period. It includes all sales and marketing expenses associated with customer acquisition, divided by the number of new customers acquired during that time.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-cac.png" alt="CAC Visual" class="kpi-image">
+    </section>
+
+
+    <section class="kpi-section">
+      <h3>DAX Formula</h3>
+      <pre><code>
+CAC = 
+DIVIDE(
+    SUM(MarketingSpend[Cost]),
+    DISTINCTCOUNT(CustomerAcquisition[CustomerID])
+)
+      </code></pre>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>Ensure that marketing costs and customer acquisition counts are filtered over the same time period.</li>
+        <li>Use a shared Date table to allow time intelligence functions like monthly or quarterly CAC.</li>
+        <li>Pair CAC with CLV (Customer Lifetime Value) to assess marketing ROI.</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-cac.pbix" class="button">Download PBIX</a>        
+        <a href="../assets/downloads/kpi-cac_marketing_spend.csv" class="button">Download Marketing Spend CSV</a>
+        <a href="../assets/downloads/kpi-cac_customer_acquisition.csv" class="button">Download Customer Acquisition CSV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
