@@ -1,0 +1,251 @@
+SubscriptionID,CustomerID,StartDate,EndDate,MonthlyFee,Product,Region,IsActive
+1,1814,2022-03-10,2023-04-21,49.99,Enterprise,North America,False
+2,1020,2023-01-22,,99.99,Enterprise,Europe,True
+3,1742,2023-05-12,2024-09-06,99.99,Pro Plan,Asia-Pacific,False
+4,1060,2022-08-02,,99.99,Pro Plan,Asia-Pacific,True
+5,1998,2023-06-19,,99.99,Pro Plan,Europe,True
+6,1115,2023-03-28,,49.99,Pro Plan,Asia-Pacific,True
+7,1211,2024-01-10,,199.99,Basic Plan,Europe,True
+8,1929,2023-10-14,,199.99,Enterprise,Europe,True
+9,1963,2022-08-26,,29.99,Basic Plan,Asia-Pacific,True
+10,1332,2024-03-06,2025-01-13,49.99,Enterprise,North America,False
+11,1785,2024-05-21,2024-07-02,49.99,Pro Plan,Europe,False
+12,1731,2023-08-21,,99.99,Enterprise,Asia-Pacific,True
+13,1441,2023-07-07,2024-07-17,29.99,Enterprise,North America,False
+14,1810,2023-09-16,2024-12-30,49.99,Pro Plan,Asia-Pacific,False
+15,1087,2024-04-16,,99.99,Pro Plan,North America,True
+16,1995,2023-01-05,,49.99,Basic Plan,Europe,True
+17,1947,2022-05-24,2022-08-06,29.99,Pro Plan,Europe,False
+18,1439,2023-12-17,,49.99,Enterprise,North America,True
+19,1749,2023-12-11,,49.99,Enterprise,North America,True
+20,1644,2023-11-05,,99.99,Basic Plan,North America,True
+21,1348,2024-06-17,2024-08-10,99.99,Basic Plan,North America,False
+22,1649,2023-06-26,,29.99,Enterprise,Asia-Pacific,True
+23,1114,2023-07-01,2024-04-28,199.99,Pro Plan,North America,False
+24,1855,2022-11-30,,199.99,Pro Plan,Europe,True
+25,1473,2024-03-14,,29.99,Enterprise,Europe,True
+26,1345,2022-09-06,2023-10-11,99.99,Basic Plan,Europe,False
+27,1885,2023-04-13,2023-06-13,99.99,Pro Plan,Asia-Pacific,False
+28,1952,2023-06-17,,49.99,Basic Plan,Europe,True
+29,1400,2024-01-10,,49.99,Pro Plan,North America,True
+30,1922,2023-05-17,,29.99,Enterprise,Asia-Pacific,True
+31,1321,2022-01-24,,99.99,Enterprise,Europe,True
+32,1861,2022-03-28,2023-02-23,29.99,Enterprise,Asia-Pacific,False
+33,1469,2023-09-24,,49.99,Enterprise,Europe,True
+34,1113,2022-04-07,,199.99,Enterprise,Europe,True
+35,1069,2024-02-25,,99.99,Enterprise,Europe,True
+36,1170,2022-03-22,2022-09-22,49.99,Pro Plan,North America,False
+37,1112,2022-02-11,,99.99,Pro Plan,Asia-Pacific,True
+38,1635,2024-03-17,,29.99,Basic Plan,Europe,True
+39,1582,2022-07-31,,29.99,Basic Plan,Asia-Pacific,True
+40,1274,2023-11-10,,29.99,Basic Plan,North America,True
+41,1188,2023-01-13,,99.99,Enterprise,Europe,True
+42,1335,2024-04-17,,49.99,Pro Plan,North America,True
+43,1991,2023-02-19,,199.99,Enterprise,North America,True
+44,1493,2022-07-26,2022-12-26,49.99,Basic Plan,Europe,False
+45,1579,2024-03-18,2025-07-26,49.99,Basic Plan,Asia-Pacific,False
+46,1233,2024-01-26,2024-10-06,99.99,Basic Plan,Europe,False
+47,1387,2024-01-28,,199.99,Basic Plan,Asia-Pacific,True
+48,1038,2023-07-21,,49.99,Basic Plan,Europe,True
+49,1636,2022-03-02,,49.99,Pro Plan,Asia-Pacific,True
+50,1294,2023-08-19,2024-12-01,199.99,Pro Plan,Europe,False
+51,1387,2024-04-08,,199.99,Basic Plan,Asia-Pacific,True
+52,1792,2023-09-02,,49.99,Basic Plan,Asia-Pacific,True
+53,1420,2023-08-01,,199.99,Basic Plan,Asia-Pacific,True
+54,1125,2022-09-14,2023-02-08,49.99,Enterprise,Europe,False
+55,1615,2022-01-15,,99.99,Enterprise,Europe,True
+56,1730,2022-01-10,2023-01-23,29.99,Basic Plan,Asia-Pacific,False
+57,1746,2022-10-15,2022-11-25,29.99,Basic Plan,North America,False
+58,1354,2022-10-14,,49.99,Basic Plan,Europe,True
+59,1420,2023-01-15,,49.99,Enterprise,Asia-Pacific,True
+60,1853,2023-07-28,,99.99,Pro Plan,Europe,True
+61,1786,2022-01-11,,29.99,Basic Plan,Asia-Pacific,True
+62,1112,2022-04-09,,29.99,Pro Plan,Europe,True
+63,1793,2023-05-23,2024-10-02,199.99,Enterprise,Europe,False
+64,1604,2023-06-15,2024-03-23,99.99,Pro Plan,North America,False
+65,1519,2022-08-27,,49.99,Enterprise,Europe,True
+66,1722,2023-05-22,,49.99,Basic Plan,Asia-Pacific,True
+67,1349,2022-04-22,,199.99,Basic Plan,Europe,True
+68,1973,2022-09-27,,99.99,Pro Plan,Asia-Pacific,True
+69,1600,2022-08-16,2022-12-20,199.99,Pro Plan,Asia-Pacific,False
+70,1693,2023-07-26,,49.99,Enterprise,North America,True
+71,1341,2022-06-29,2023-07-22,29.99,Pro Plan,Asia-Pacific,False
+72,1676,2022-09-05,,49.99,Enterprise,North America,True
+73,1202,2023-04-22,,199.99,Basic Plan,North America,True
+74,1806,2022-12-12,,199.99,Basic Plan,Asia-Pacific,True
+75,1019,2022-03-28,2022-10-08,199.99,Enterprise,North America,False
+76,1461,2022-08-15,,49.99,Pro Plan,North America,True
+77,1489,2023-06-12,,99.99,Enterprise,North America,True
+78,1129,2024-05-21,,29.99,Pro Plan,Europe,True
+79,1271,2022-10-22,,199.99,Basic Plan,Europe,True
+80,1724,2022-04-12,,49.99,Basic Plan,Asia-Pacific,True
+81,1522,2023-08-19,2024-02-28,99.99,Basic Plan,North America,False
+82,1192,2023-07-01,2023-08-06,49.99,Pro Plan,Asia-Pacific,False
+83,1381,2022-08-30,,49.99,Pro Plan,North America,True
+84,1222,2023-09-11,,29.99,Enterprise,Asia-Pacific,True
+85,1157,2022-01-31,,49.99,Enterprise,Asia-Pacific,True
+86,1244,2022-06-09,2022-09-10,49.99,Basic Plan,Europe,False
+87,1020,2022-01-28,2022-07-21,99.99,Pro Plan,North America,False
+88,1961,2023-06-29,,99.99,Enterprise,North America,True
+89,1511,2023-01-04,,29.99,Basic Plan,Europe,True
+90,1235,2023-02-14,,49.99,Pro Plan,Europe,True
+91,1995,2023-11-30,2024-07-07,49.99,Basic Plan,North America,False
+92,1356,2022-04-12,,49.99,Basic Plan,Europe,True
+93,1488,2022-11-23,,199.99,Basic Plan,Europe,True
+94,1468,2024-02-16,,99.99,Basic Plan,Asia-Pacific,True
+95,1174,2023-04-08,,29.99,Pro Plan,Asia-Pacific,True
+96,1726,2023-08-19,2024-10-21,49.99,Enterprise,North America,False
+97,1313,2023-09-04,,29.99,Pro Plan,Asia-Pacific,True
+98,1085,2024-06-02,,99.99,Pro Plan,North America,True
+99,1704,2024-02-08,2024-06-09,49.99,Enterprise,Asia-Pacific,False
+100,1686,2023-08-20,2024-04-30,49.99,Pro Plan,Europe,False
+101,1337,2024-01-11,,29.99,Enterprise,Asia-Pacific,True
+102,1849,2023-05-21,2024-08-16,29.99,Pro Plan,Asia-Pacific,False
+103,1886,2023-10-18,2023-11-30,199.99,Pro Plan,North America,False
+104,1766,2023-05-17,,49.99,Pro Plan,Asia-Pacific,True
+105,1604,2023-08-28,,49.99,Enterprise,Asia-Pacific,True
+106,1551,2023-09-20,,49.99,Pro Plan,North America,True
+107,1762,2022-09-30,2024-01-18,99.99,Pro Plan,Asia-Pacific,False
+108,1089,2022-09-15,,199.99,Pro Plan,Europe,True
+109,1698,2022-12-17,,199.99,Basic Plan,North America,True
+110,1167,2023-02-28,2023-08-26,29.99,Basic Plan,Asia-Pacific,False
+111,1028,2023-04-21,2024-02-21,49.99,Enterprise,Europe,False
+112,1269,2023-03-29,2023-08-14,199.99,Basic Plan,Asia-Pacific,False
+113,1600,2023-12-17,2025-01-04,99.99,Basic Plan,North America,False
+114,1392,2022-02-04,2022-11-13,49.99,Pro Plan,North America,False
+115,1835,2022-08-30,,99.99,Enterprise,Asia-Pacific,True
+116,1404,2022-10-14,2023-07-23,199.99,Basic Plan,Asia-Pacific,False
+117,1478,2023-07-04,,99.99,Enterprise,Asia-Pacific,True
+118,1505,2022-03-19,,29.99,Pro Plan,Europe,True
+119,1435,2024-03-08,2025-05-03,199.99,Basic Plan,Asia-Pacific,False
+120,1582,2023-10-22,2024-07-11,49.99,Enterprise,North America,False
+121,1494,2022-07-26,2023-09-18,29.99,Pro Plan,Asia-Pacific,False
+122,1204,2024-04-19,,199.99,Pro Plan,Asia-Pacific,True
+123,1350,2022-12-28,2023-11-09,49.99,Basic Plan,North America,False
+124,1125,2022-03-21,,49.99,Enterprise,North America,True
+125,1837,2023-09-08,,49.99,Enterprise,Europe,True
+126,1627,2023-04-21,2024-09-06,199.99,Pro Plan,Europe,False
+127,1188,2022-01-28,,49.99,Enterprise,Europe,True
+128,1866,2023-09-13,,199.99,Basic Plan,Europe,True
+129,1393,2023-06-24,,49.99,Pro Plan,North America,True
+130,1978,2024-05-07,,99.99,Pro Plan,North America,True
+131,1886,2023-11-09,,199.99,Basic Plan,North America,True
+132,1220,2024-03-16,2024-10-01,99.99,Pro Plan,Asia-Pacific,False
+133,1560,2023-07-09,2024-01-31,49.99,Pro Plan,North America,False
+134,1884,2023-08-09,,29.99,Basic Plan,Europe,True
+135,1893,2023-08-02,2024-11-07,29.99,Basic Plan,North America,False
+136,1539,2023-11-12,2023-12-21,29.99,Pro Plan,Asia-Pacific,False
+137,1291,2023-01-10,,49.99,Basic Plan,Asia-Pacific,True
+138,1425,2022-10-09,2023-04-22,49.99,Pro Plan,Asia-Pacific,False
+139,1817,2022-05-19,,29.99,Enterprise,Europe,True
+140,1827,2023-01-19,,199.99,Basic Plan,Asia-Pacific,True
+141,1618,2022-03-13,2023-01-05,99.99,Basic Plan,Asia-Pacific,False
+142,1300,2024-06-08,,29.99,Pro Plan,Europe,True
+143,1687,2023-04-22,,99.99,Pro Plan,North America,True
+144,1976,2024-03-10,,29.99,Enterprise,Europe,True
+145,1613,2023-04-19,,29.99,Basic Plan,Europe,True
+146,1153,2024-06-17,,99.99,Enterprise,Asia-Pacific,True
+147,1276,2023-03-28,,199.99,Basic Plan,North America,True
+148,1660,2024-02-04,,199.99,Pro Plan,Europe,True
+149,1589,2022-09-16,2023-06-03,99.99,Enterprise,North America,False
+150,1700,2023-09-02,,99.99,Basic Plan,North America,True
+151,1557,2023-01-03,,49.99,Pro Plan,Asia-Pacific,True
+152,1084,2022-06-07,2022-11-29,99.99,Enterprise,North America,False
+153,1910,2022-02-17,2022-06-16,29.99,Enterprise,Asia-Pacific,False
+154,1695,2024-03-08,,99.99,Basic Plan,Asia-Pacific,True
+155,1097,2023-04-24,,99.99,Enterprise,Europe,True
+156,1743,2022-01-18,,199.99,Enterprise,North America,True
+157,1311,2023-08-30,,29.99,Basic Plan,Europe,True
+158,1382,2022-07-12,2023-02-27,29.99,Enterprise,Asia-Pacific,False
+159,1498,2023-06-07,2024-02-07,29.99,Enterprise,Asia-Pacific,False
+160,1716,2022-05-08,,199.99,Basic Plan,Europe,True
+161,1197,2022-08-25,2023-07-15,49.99,Basic Plan,Asia-Pacific,False
+162,1145,2023-11-20,,99.99,Pro Plan,Europe,True
+163,1551,2023-08-21,2024-04-24,49.99,Basic Plan,Europe,False
+164,1934,2024-03-25,,49.99,Enterprise,Europe,True
+165,1487,2023-01-13,,29.99,Basic Plan,Asia-Pacific,True
+166,1275,2022-07-22,,99.99,Basic Plan,Asia-Pacific,True
+167,1203,2022-10-08,,29.99,Basic Plan,North America,True
+168,1993,2023-01-19,,29.99,Basic Plan,Asia-Pacific,True
+169,1594,2022-03-05,,29.99,Enterprise,Europe,True
+170,1811,2022-08-22,,29.99,Basic Plan,Asia-Pacific,True
+171,1347,2024-05-02,,29.99,Enterprise,Europe,True
+172,1541,2022-03-06,,199.99,Pro Plan,North America,True
+173,1671,2024-02-13,,49.99,Pro Plan,Asia-Pacific,True
+174,1808,2023-02-10,,49.99,Enterprise,Asia-Pacific,True
+175,1146,2023-04-16,2023-10-23,199.99,Pro Plan,North America,False
+176,1539,2023-02-14,,199.99,Enterprise,North America,True
+177,1209,2022-12-01,,99.99,Pro Plan,Europe,True
+178,1948,2023-12-26,2024-04-23,49.99,Enterprise,North America,False
+179,1741,2022-05-30,2022-10-27,199.99,Basic Plan,North America,False
+180,1747,2022-09-14,,99.99,Pro Plan,Europe,True
+181,1439,2022-11-03,,49.99,Basic Plan,Asia-Pacific,True
+182,1996,2022-04-16,2023-06-25,29.99,Pro Plan,Asia-Pacific,False
+183,1543,2023-04-05,,99.99,Enterprise,Europe,True
+184,1905,2022-05-21,,29.99,Pro Plan,Europe,True
+185,1088,2023-02-24,2024-04-05,99.99,Enterprise,North America,False
+186,1966,2024-03-24,2024-09-04,199.99,Pro Plan,Asia-Pacific,False
+187,1343,2023-02-23,,199.99,Pro Plan,North America,True
+188,1915,2023-01-11,,99.99,Enterprise,Asia-Pacific,True
+189,1092,2023-12-19,2024-02-21,99.99,Pro Plan,Asia-Pacific,False
+190,1199,2022-02-15,,49.99,Basic Plan,North America,True
+191,1566,2023-10-24,2025-01-26,199.99,Pro Plan,Europe,False
+192,1317,2023-08-04,2024-02-03,49.99,Enterprise,North America,False
+193,1090,2022-03-16,,199.99,Basic Plan,Europe,True
+194,1436,2022-03-06,2023-08-23,199.99,Enterprise,Europe,False
+195,1007,2022-12-02,2023-07-20,99.99,Pro Plan,Asia-Pacific,False
+196,1104,2022-09-18,,29.99,Basic Plan,Europe,True
+197,1282,2023-03-12,,99.99,Pro Plan,North America,True
+198,1522,2023-04-20,,29.99,Pro Plan,Asia-Pacific,True
+199,1493,2022-09-15,,29.99,Pro Plan,North America,True
+200,1443,2022-06-28,,199.99,Basic Plan,Europe,True
+201,1931,2024-05-04,,49.99,Enterprise,North America,True
+202,1377,2022-03-17,2022-11-17,49.99,Enterprise,Europe,False
+203,1980,2024-02-25,,199.99,Basic Plan,North America,True
+204,1836,2022-04-18,,199.99,Basic Plan,Asia-Pacific,True
+205,1340,2022-10-13,2023-08-12,49.99,Basic Plan,Asia-Pacific,False
+206,1182,2023-12-05,2025-05-25,49.99,Basic Plan,Asia-Pacific,False
+207,1102,2023-08-09,2024-05-03,99.99,Enterprise,Europe,False
+208,1230,2022-12-10,,29.99,Pro Plan,Asia-Pacific,True
+209,1186,2023-01-03,,29.99,Pro Plan,Asia-Pacific,True
+210,1888,2022-10-02,2023-05-07,199.99,Pro Plan,Europe,False
+211,1640,2024-02-18,,29.99,Enterprise,Europe,True
+212,1107,2023-03-24,2023-07-11,99.99,Basic Plan,Europe,False
+213,1821,2023-10-02,,99.99,Pro Plan,North America,True
+214,1197,2022-05-20,,99.99,Enterprise,Europe,True
+215,1904,2023-11-05,,49.99,Pro Plan,Europe,True
+216,1728,2022-05-07,,99.99,Enterprise,North America,True
+217,1699,2023-01-08,,29.99,Enterprise,Europe,True
+218,1423,2022-10-20,,49.99,Enterprise,Europe,True
+219,1318,2022-07-31,2023-01-21,29.99,Enterprise,Europe,False
+220,1078,2022-09-29,,199.99,Enterprise,North America,True
+221,1183,2022-09-28,,199.99,Basic Plan,Europe,True
+222,1094,2022-01-11,,49.99,Pro Plan,North America,True
+223,1589,2024-05-26,,49.99,Enterprise,Europe,True
+224,1857,2023-11-19,,99.99,Enterprise,Asia-Pacific,True
+225,1806,2023-07-23,,99.99,Pro Plan,Europe,True
+226,1196,2022-05-18,2022-09-04,49.99,Basic Plan,Asia-Pacific,False
+227,1696,2023-02-26,2023-12-25,199.99,Enterprise,North America,False
+228,1886,2023-08-04,2024-02-21,29.99,Enterprise,Asia-Pacific,False
+229,1914,2022-11-19,,99.99,Pro Plan,Asia-Pacific,True
+230,1914,2022-02-26,,99.99,Enterprise,Europe,True
+231,1719,2023-06-26,2024-02-02,199.99,Enterprise,Europe,False
+232,1319,2022-08-24,,29.99,Basic Plan,Europe,True
+233,1624,2022-03-29,,49.99,Enterprise,North America,True
+234,1962,2022-01-14,2022-03-12,49.99,Enterprise,Europe,False
+235,1629,2023-01-24,2023-03-29,99.99,Basic Plan,North America,False
+236,1971,2024-06-04,,199.99,Enterprise,Asia-Pacific,True
+237,1739,2022-05-06,2023-01-16,99.99,Enterprise,Europe,False
+238,1654,2022-06-02,,49.99,Basic Plan,Asia-Pacific,True
+239,1301,2022-11-28,2024-03-02,199.99,Pro Plan,Europe,False
+240,1147,2022-07-27,,199.99,Enterprise,Europe,True
+241,1084,2023-01-31,2024-04-19,99.99,Basic Plan,Asia-Pacific,False
+242,1598,2022-09-07,,199.99,Basic Plan,Asia-Pacific,True
+243,1936,2022-12-04,,49.99,Enterprise,Asia-Pacific,True
+244,1719,2022-09-15,,199.99,Pro Plan,North America,True
+245,1214,2022-04-05,,29.99,Enterprise,Asia-Pacific,True
+246,1399,2022-06-29,,99.99,Enterprise,North America,True
+247,1205,2024-04-10,2025-03-16,29.99,Basic Plan,Asia-Pacific,False
+248,1621,2023-05-15,2024-03-27,99.99,Basic Plan,Europe,False
+249,1125,2022-07-25,2023-04-05,29.99,Pro Plan,Asia-Pacific,False
+250,1490,2024-06-16,,29.99,Enterprise,Europe,True
