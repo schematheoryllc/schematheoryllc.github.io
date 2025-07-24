@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="KPI details and resources for Customer Churn Rate (%)">
+  <meta name="description" content="Learn how to calculate and use the Customer Churn Rate KPI with examples, formulas, and downloadable resources.">
   <title>KPI: Customer Churn Rate (%) | Schema Theory</title>
   <link rel="stylesheet" href="../schematheory.css" />
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Schema Theory LLC</h1>
+      <h1>Schema Theory</h1>
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
-          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main class="kpi-main container">
     <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
 
@@ -28,42 +30,95 @@
 
     <section class="kpi-section">
       <h3>Description</h3>
-      <p>Description for Customer Churn Rate (%) goes here. This KPI helps evaluate performance related to its specific area.</p>
+      <p>Customer Churn Rate represents the percentage of customers who stop using a product or service within a given time period. It is a critical KPI for subscription-based businesses, helping identify retention issues and evaluate the impact of customer success initiatives.</p>
     </section>
 
     <section class="kpi-section">
       <h3>Visual Example</h3>
-      <img src="../assets/churn-rate-example.png" alt="Customer Churn Rate (%) Visual" class="kpi-image">
+      <img src="../assets/kpi-churn_rate.png" alt="Customer Churn Rate Visual" class="kpi-image">
     </section>
 
     <section class="kpi-section">
-      <h3>DAX Formula</h3>
-      <pre><code>
--- DAX formula example for Customer Churn Rate (%)
-      </code></pre>
+      <h3>DAX Formulas</h3>
+
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Churned Customers = 
+VAR MonthStart = MIN('Date'[Date])
+VAR MonthEnd   = EOMONTH(MonthStart, 0)
+
+RETURN
+CALCULATE (
+    DISTINCTCOUNT (Subscriptions[CustomerID]),
+    FILTER (
+        Subscriptions,
+        NOT ISBLANK(Subscriptions[EndDate]) &&
+        Subscriptions[EndDate] >= MonthStart &&
+        Subscriptions[EndDate] <= MonthEnd
+    )
+) 
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
+    </section>
+
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Customers at Start of Period = 
+CALCULATE(
+    DISTINCTCOUNT(Subscriptions[CustomerID]),
+    FILTER(
+        Subscriptions,
+        Subscriptions[StartDate] <= MIN('Date'[Date]) &&
+        (ISBLANK(Subscriptions[EndDate]) || Subscriptions[EndDate] > MIN('Date'[Date]))
+    )
+)
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
+    </section>
+
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Churn Rate % = 
+DIVIDE(
+    [Churned Customers],
+    [Customers at Start of Period]
+)</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
     </section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
-        <li>Use appropriate filters for time periods.</li>
-        <li>Ensure supporting tables have necessary columns.</li>
-        <li>Interpret results in the context of your business.</li>
+        <li><b>Churned Customers</b> are those who were active in the previous period but are no longer active in the current period.</li>
+        <li><b>Customers at Start of Period</b> typically refers to customers active in the previous full period (e.g., start of the month).</li>
+        <li>Use a disconnected Date table to calculate churn month-over-month with proper filtering.</li>
+        <li>Pair churn rate with retention rate (1 - churn) and cohort analysis for deeper insights.</li>
       </ul>
     </section>
 
     <section class="kpi-section">
       <h3>Downloads</h3>
       <div class="download-links">
-        <a href="../assets/downloads/kpi-churn-rate.pbix" class="button">Download PBIX</a>
-        <a href="../assets/downloads/kpi-churn-rate.csv" class="button">Download Sample Data</a>
+        <a href="../assets/downloads/kpi-churn_rate.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-churn_rate.csv" class="button">Download Subscriptions CSV</a>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
     </div>
   </footer>
+  <script src="kpi-buttons.js"></script>
 </body>
 </html>

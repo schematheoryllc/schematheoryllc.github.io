@@ -11,7 +11,7 @@
 <body>
   <header>
     <div class="container">
-      <h1>Schema Theory LLC</h1>
+      <h1>Schema Theory</h1>
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
@@ -40,8 +40,8 @@
 
     <section class="kpi-section">
       <h3>DAX Formula</h3>
-      <pre><code>
-LTV = 
+      <div class="code-toolbar">
+        <pre><code class="language-dax">LTV = 
 CALCULATE(
     DIVIDE(
         SUMX(
@@ -52,7 +52,12 @@ CALCULATE(
     ),
     REMOVEFILTERS(Date)
 )
-      </code></pre>
+          </code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
     </section>
 
     <section class="kpi-section">
@@ -80,5 +85,6 @@ CALCULATE(
       <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
     </div>
   </footer>
+  <script src="kpi-buttons.js"></script>  
 </body>
 </html>
