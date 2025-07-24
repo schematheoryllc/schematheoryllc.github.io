@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <meta name="description" content="KPI details and resources for Net Promoter Score (NPS)">
   <title>KPI: Net Promoter Score (NPS) | Schema Theory</title>
   <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
 </head>
 <body>
   <header>
@@ -16,11 +18,13 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
-          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main class="kpi-main container">
     <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
 
@@ -28,27 +32,51 @@
 
     <section class="kpi-section">
       <h3>Description</h3>
-      <p>Description for Net Promoter Score (NPS) goes here. This KPI helps evaluate performance related to its specific area.</p>
+      <p>
+        Net Promoter Score (NPS) measures customer loyalty by asking, “How likely are you to recommend our company/product/service to a friend or colleague?” Respondents answer on a scale from 0 to 10. Based on their responses, customers are grouped into:
+      </p>
+      <ul>
+        <li><strong>Promoters (9–10):</strong> Loyal enthusiasts who will keep buying and refer others.</li>
+        <li><strong>Passives (7–8):</strong> Satisfied but unenthusiastic customers vulnerable to competitors.</li>
+        <li><strong>Detractors (0–6):</strong> Unhappy customers who may damage your brand through negative word of mouth.</li>
+      </ul>
+      <p>NPS is calculated by subtracting the percentage of Detractors from the percentage of Promoters.</p>
     </section>
 
     <section class="kpi-section">
       <h3>Visual Example</h3>
-      <img src="../assets/nps-example.png" alt="Net Promoter Score (NPS) Visual" class="kpi-image">
+      <img src="../assets/kpi-nps.png" alt="Net Promoter Score (NPS) Visual" class="kpi-image">
     </section>
 
     <section class="kpi-section">
       <h3>DAX Formula</h3>
-      <pre><code>
--- DAX formula example for Net Promoter Score (NPS)
-      </code></pre>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Net Promoter Score = 
+VAR Promoters =
+    CALCULATE(COUNTROWS(SurveyResponses), SurveyResponses[NPS_Score] >= 9)
+
+VAR Detractors =
+    CALCULATE(COUNTROWS(SurveyResponses), SurveyResponses[NPS_Score] <= 6)
+
+VAR TotalResponses =
+    CALCULATE(COUNTROWS(SurveyResponses), NOT ISBLANK(SurveyResponses[NPS_Score]))
+
+RETURN
+DIVIDE((Promoters - Detractors), TotalResponses, 0) * 100</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
     </section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
-        <li>Use appropriate filters for time periods.</li>
-        <li>Ensure supporting tables have necessary columns.</li>
-        <li>Interpret results in the context of your business.</li>
+        <li>Requires numeric responses from 0 to 10 in a column like <code>NPS_Score</code>.</li>
+        <li>Optionally filter to most recent survey responses per customer.</li>
+        <li>Segment by product line, geography, or channel for deeper insights.</li>
+        <li>Benchmark your NPS against industry averages for context.</li>
       </ul>
     </section>
 
@@ -60,9 +88,10 @@
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container">
-      <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
     </div>
   </footer>
   <script src="kpi-buttons.js"></script>  

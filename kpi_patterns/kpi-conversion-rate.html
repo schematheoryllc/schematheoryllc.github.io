@@ -6,6 +6,7 @@
   <meta name="description" content="KPI details and resources for Conversion Rate">
   <title>KPI: Conversion Rate | Schema Theory</title>
   <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
 </head>
 <body>
   <header>
@@ -16,7 +17,8 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
-          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -28,41 +30,70 @@
 
     <section class="kpi-section">
       <h3>Description</h3>
-      <p>Description for Conversion Rate goes here. This KPI helps evaluate performance related to its specific area.</p>
+      <p>Conversion Rate measures the percentage of users, leads, or visitors who take a desired action. This action could be purchasing a product, submitting a contact form, signing up for a service, or completing a transaction. It is one of the most critical KPIs for evaluating the effectiveness of marketing campaigns, user flows, and sales funnels. A higher conversion rate generally indicates more efficient targeting, messaging, or user experience.</p>
     </section>
 
     <section class="kpi-section">
       <h3>Visual Example</h3>
-      <img src="../assets/conversion-rate-example.png" alt="Conversion Rate Visual" class="kpi-image">
+      <img src="../assets/kpi-conversion_rate.png" alt="Bar chart showing conversion rates by channel or campaign" class="kpi-image">
     </section>
 
     <section class="kpi-section">
-      <h3>DAX Formula</h3>
-      <pre><code>
--- DAX formula example for Conversion Rate
-      </code></pre>
+      <h3>DAX Formulas</h3>
+
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Total Users = SUM('Conversions'[TotalUsers])
+        </code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
+
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Converted Users = SUM('Conversions'[ConvertedUsers])
+        </code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
+
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Conversion Rate (%) = 
+DIVIDE(
+    [Converted Users], 
+    [Total Users]
+)
+        </code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
     </section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
-        <li>Use appropriate filters for time periods.</li>
-        <li>Ensure supporting tables have necessary columns.</li>
-        <li>Interpret results in the context of your business.</li>
+        <li>Ensure that “Converted Users” and “Total Users” are defined consistently (e.g., based on event tracking, transactions, or lead stages).</li>
+        <li>Filter by campaign, region, device type, or landing page to find conversion drivers.</li>
+        <li>Use this KPI in combination with volume-based KPIs (like traffic or leads) for better context.</li>
+        <li>When visualizing over time, use week or month aggregation to identify trends.</li>
       </ul>
     </section>
 
     <section class="kpi-section">
       <h3>Downloads</h3>
       <div class="download-links">
-        <a href="../assets/downloads/kpi-conversion-rate.pbix" class="button">Download PBIX</a>
-        <a href="../assets/downloads/kpi-conversion-rate.csv" class="button">Download Sample Data</a>
+        <a href="../assets/downloads/kpi-conversion_rate.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-conversion_rate.csv" class="button">Download Sample Data</a>
       </div>
     </section>
   </main>
   <footer>
     <div class="container">
-      <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
     </div>
   </footer>
   <script src="kpi-buttons.js"></script>  

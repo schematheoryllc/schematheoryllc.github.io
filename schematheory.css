@@ -1,4 +1,6 @@
 
+/* ===== Base & Layout ===== */
+
 html {
     height: 100%;
     box-sizing: border-box;
@@ -24,6 +26,50 @@ body {
     flex: 1;
 }
 
+
+/* ===== Typography ===== */
+
+* {
+    font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', sans-serif;
+}
+
+.kpi-main h1 {
+  color: #900;
+}
+
+
+.kpi-main h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #900;
+}
+
+.kpi-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #900;
+}
+
+.primary-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.service-card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #900;
+}
+
+.service-card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #900;
+}
+
+
+/* ===== Header & Navigation ===== */
+
 header, footer {
     background: #333;
     color: #fff;
@@ -32,10 +78,6 @@ header, footer {
 }
 
 header {
-    padding: 1em 0;
-}
-
-footer {
     padding: 1em 0;
 }
 
@@ -56,110 +98,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-.red-sphere {
-    width: 125px;
-    height: 127px;
-}
-
-.image-left {
-    float: left;
-    margin-right: 20px;
-}
-
-* {
-    font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', sans-serif;
-}
-
-
-/* KPI Page Enhancements */
-.kpi-main {
-  padding-top: 2rem;
-}
-
-.kpi-main h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.kpi-section {
-  margin-top: 2rem;
-}
-
-.kpi-image {
-  width: 100%;
-  max-width: 720px;
-  display: block;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-}
-
-.kpi-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-.kpi-card {
-  flex: 1 1 280px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.kpi-card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: #900;
-}
-.kpi-card p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-
-/* Download Buttons */
-.download-links {
-  margin-top: 1rem;
-}
-
-.download-links .button {
-  display: inline-block;
-  margin: 0.3rem 0.5rem 0.3rem 0;
-  padding: 0.6rem 1rem;
-  background-color: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
-}
-
-.download-links .button:hover {
-  background-color: #004999;
-}
-
-/* Back Link */
-.back-link {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
 /* Top Branding Header */
 .primary-header {
   background: #1a1a1a;
   color: #fff;
   padding: 0.5rem 0;
-}
-
-.primary-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
 }
 
 .primary-header a {
@@ -198,6 +141,129 @@ nav ul li a {
 .main-nav a:hover {
   background: #0066cc;
   color: #fff;
+}
+
+
+/* ===== Hero Sections ===== */
+
+.hero .button:hover {
+  background-color: #ddd;
+  color: #700;
+}
+
+.hero {
+  background: linear-gradient(to right, #111, #900);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero .button {
+  background: white;
+  color: #900;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+/* ===== KPI Pages ===== */
+
+/* KPI Page Enhancements */
+.kpi-main {
+  padding-top: 2rem;
+}
+
+.kpi-section {
+  margin-top: 2rem;
+}
+
+.kpi-image {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+}
+
+.kpi-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.kpi-card {
+  flex: 1 1 280px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.kpi-card p {
+  font-size: 0.875rem;        /* smaller paragraph text */
+  margin: 0;    
+  color: #333;
+}
+
+
+/* ===== Buttons & Links ===== */
+
+/* Download Buttons */
+.download-links {
+  margin-top: 1rem;
+}
+
+.download-links .button {
+  display: inline-block;
+  margin: 0.3rem 0.5rem 0.3rem 0;
+  padding: 0.6rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.download-links .button:hover {
+  background-color: #004999;
+}
+
+/* Back Link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    padding: 1em 0;
+}
+
+
+/* ===== Other ===== */
+
+.red-sphere {
+    width: 125px;
+    height: 127px;
+}
+
+.image-left {
+    float: left;
+    margin-right: 20px;
 }
 
 /* Code toolbar */
@@ -246,11 +312,6 @@ nav ul li a {
   transition: all 0.2s ease-in-out;
 }
 
-.hero .button:hover {
-  background-color: #ddd;
-  color: #700;
-}
-
 /* Main page formatting */
 
 .service-grid {
@@ -259,6 +320,7 @@ nav ul li a {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
 .service-card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -266,11 +328,6 @@ nav ul li a {
   border-radius: 8px;
   flex: 1 1 300px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.service-card h3 {
-  margin-top: 0;
-  font-size: 1.15rem;
-  color: #900;
 }
 
 .mission-box {
@@ -287,28 +344,13 @@ nav ul li a {
   margin: 2rem 0;
 }
 
-.hero {
-  background: linear-gradient(to right, #111, #900);
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-.hero .button {
-  background: white;
-  color: #900;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
 .certifications {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
 }
+
 .cert-card {
   background: #f5f5f5;
   border: 1px solid #ddd;
@@ -331,7 +373,9 @@ img.image-left {
     display: block;
     margin: 0 auto 1rem;
   }
+
 }
+
 .mission-box {
   background-color: #f5f5f5;
   border-left: 4px solid #900;
@@ -344,7 +388,9 @@ img.image-left {
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
+  margin-bottom: 3rem; /* add space before footer */
 }
+
 .service-card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -353,11 +399,6 @@ img.image-left {
   flex: 1 1 300px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-.service-card h3 {
-  margin-top: 0;
-  font-size: 1.15rem;
-  color: #900;
-}
 
 .contact-box {
   background-color: #f9f9f9;
@@ -365,3 +406,4 @@ img.image-left {
   padding: 1rem;
   margin: 2rem 0;
 }
+

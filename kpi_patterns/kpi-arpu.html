@@ -6,6 +6,7 @@
   <meta name="description" content="Learn how to calculate and use the Average Revenue Per User (ARPU) KPI with examples, formulas, and downloadable resources.">
   <title>KPI: Average Revenue Per User (ARPU) | Schema Theory</title>
   <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
 </head>
 <body>
 
@@ -76,11 +77,15 @@
   </main>
 
   <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Schema Theory. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Schema Theory LLC</p>
+        </div>
+    </footer>
+	
+	<script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 <script src="kpi-buttons.js"></script>
 </body>
 </html>

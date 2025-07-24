@@ -6,6 +6,7 @@
   <meta name="description" content="KPI details and resources for Average Resolution Time">
   <title>KPI: Average Resolution Time | Schema Theory</title>
   <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
 </head>
 <body>
   <header>
@@ -16,7 +17,8 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../services.html">Services</a></li>
-          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -28,41 +30,55 @@
 
     <section class="kpi-section">
       <h3>Description</h3>
-      <p>Description for Average Resolution Time goes here. This KPI helps evaluate performance related to its specific area.</p>
+      <p>Average Resolution Time measures the typical time it takes to resolve a customer issue, service request, or support ticket. It is calculated by averaging the duration between when an issue is created and when it is marked as resolved. This KPI is crucial for monitoring customer service efficiency, identifying bottlenecks in service processes, and ensuring timely resolution of issues.</p>
     </section>
 
     <section class="kpi-section">
       <h3>Visual Example</h3>
-      <img src="../assets/resolution-time-example.png" alt="Average Resolution Time Visual" class="kpi-image">
+      <img src="../assets/kpi-average_resolution_time.png" alt="Line chart showing average resolution time over time" class="kpi-image">
     </section>
 
-    <section class="kpi-section">
+   <section class="kpi-section">
       <h3>DAX Formula</h3>
-      <pre><code>
--- DAX formula example for Average Resolution Time
-      </code></pre>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Average Resolution Time (hrs) = 
+AVERAGEX(
+    FILTER(
+        Tickets,
+        NOT(ISBLANK(Tickets[ResolvedDate])) && NOT(ISBLANK(Tickets[CreatedDate]))
+    ),
+    DATEDIFF(Tickets[CreatedDate], Tickets[ResolvedDate], HOUR)
+)
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+          <button class="conventions-button" onclick="showConventions()">Conventions</button>
+        </div>
+      </div>
     </section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
-        <li>Use appropriate filters for time periods.</li>
-        <li>Ensure supporting tables have necessary columns.</li>
-        <li>Interpret results in the context of your business.</li>
+        <li>Use this KPI with time-based visuals (e.g. trend lines by week or month) to track performance over time.</li>
+        <li>Apply filters for ticket priority, category, or team to identify areas needing improvement.</li>
+        <li>If resolution spans multiple days, consider displaying in hours or business hours for better granularity.</li>
+        <li>Exclude unresolved tickets from the calculation or flag them separately.</li>
+        <li>Use tooltips or drillthrough pages to explore individual tickets with long resolution times.</li>
       </ul>
     </section>
 
     <section class="kpi-section">
       <h3>Downloads</h3>
       <div class="download-links">
-        <a href="../assets/downloads/kpi-resolution-time.pbix" class="button">Download PBIX</a>
-        <a href="../assets/downloads/kpi-resolution-time.csv" class="button">Download Sample Data</a>
+        <a href="../assets/downloads/kpi-average_resolution_time.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-average_resolution_time.csv" class="button">Download Sample Data</a>
       </div>
     </section>
   </main>
   <footer>
     <div class="container">
-      <p>&copy; 2025 Schema Theory LLC. All rights reserved.</p>
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
     </div>
   </footer>
   <script src="kpi-buttons.js"></script>  
