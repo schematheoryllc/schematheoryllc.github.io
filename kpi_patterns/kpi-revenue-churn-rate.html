@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Calculate Revenue Churn Rate to measure recurring revenue lost from cancellations and downgrades. Includes DAX, SQL, and examples.">
+  <title>KPI: Revenue Churn Rate | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0V3TFLKV37');</script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dax.min.js"></script>
+</head>
+<body>
+  <header><div class="container">
+      <h1>Schema Theory</h1>
+      <nav><ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul></nav>
+    </div></header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+    <h2>Revenue Churn Rate</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Revenue Churn Rate measures the percentage of recurring revenue lost due to subscription cancellations or downgrades within a given time period. Unlike customer churn, it reflects the financial impact of churned customers.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-revenue_churn.png" alt="Revenue Churn Rate Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Formula</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Revenue Churn (Gross) = 
+VAR MonthStart = STARTOFMONTH('Date'[Date])
+VAR MonthEnd = ENDOFMONTH('Date'[Date])
+VAR MRR_Start = 
+    CALCULATE(
+        SUM(Subscriptions[MonthlyFee]),
+        FILTER(
+            Subscriptions,
+            Subscriptions[StartDate] <= MonthStart &&
+            (ISBLANK(Subscriptions[EndDate]) || Subscriptions[EndDate] > MonthStart)
+        )
+    )
+VAR MRR_Lost = 
+    CALCULATE(
+        SUM(Subscriptions[MonthlyFee]),
+        FILTER(
+            Subscriptions,
+            Subscriptions[EndDate] >= MonthStart &&
+            Subscriptions[EndDate] <= MonthEnd
+        )
+    )
+RETURN
+DIVIDE(MRR_Lost, MRR_Start)</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
+      <h3>SQL Example</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">WITH monthly_mrr AS (
+  SELECT
+    DATE_TRUNC('month', d)::DATE AS period_start,
+    SUM(s.MonthlyFee) AS MRR_Start
+  FROM Date d
+  JOIN Subscriptions s ON s.StartDate <= d AND (s.EndDate IS NULL OR s.EndDate > d)
+  WHERE d = DATE_TRUNC('month', d)
+  GROUP BY 1
+),
+lost_mrr AS (
+  SELECT
+    DATE_TRUNC('month', EndDate)::DATE AS period_start,
+    SUM(MonthlyFee) AS MRR_Lost
+  FROM Subscriptions
+  WHERE EndDate IS NOT NULL
+  GROUP BY 1
+)
+SELECT
+  m.period_start,
+  m.MRR_Start,
+  l.MRR_Lost,
+  CASE 
+    WHEN m.MRR_Start = 0 THEN NULL
+    ELSE (l.MRR_Lost / m.MRR_Start)
+  END AS RevenueChurnRate
+FROM monthly_mrr m
+LEFT JOIN lost_mrr l ON m.period_start = l.period_start
+ORDER BY m.period_start;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>Focuses on revenue lost, not customer count.</li>
+        <li>Best used with MRR-style billing models.</li>
+        <li>Use Net Revenue Churn if you also track expansion (upgrades).</li>
+        <li>Ideal for SaaS or recurring-revenue businesses.</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-revenue_churn.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-revenue_churn.csv" class="button">Download Sample Data</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
+    </div></footer>
+  <script src="kpi-buttons.js"></script>
+</body>
+</html>

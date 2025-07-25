@@ -212,6 +212,26 @@ nav ul li a {
   color: #333;
 }
 
+.kpi-suggestion {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.kpi-suggestion a {
+  color: #b30000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.kpi-suggestion a:hover {
+  text-decoration: underline;
+}
+
+
 
 /* ===== Buttons & Links ===== */
 
