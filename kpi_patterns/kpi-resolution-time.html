@@ -78,6 +78,24 @@ AVERAGEX(
     </section>
 
     <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">SELECT
+  ROUND(
+    AVG(
+      EXTRACT(EPOCH FROM (ResolvedDate - CreatedDate)) / 3600.0
+    ),
+    2
+  ) AS AvgResolutionTime_Hours
+FROM Tickets
+WHERE CreatedDate IS NOT NULL AND ResolvedDate IS NOT NULL;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
         <li>Use this KPI with time-based visuals (e.g. trend lines by week or month) to track performance over time.</li>

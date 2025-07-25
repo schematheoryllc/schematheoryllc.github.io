@@ -91,6 +91,27 @@ DIVIDE(
     </section>
 
     <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">SELECT
+  Channel,
+  SUM(ConvertedUsers) AS ConvertedUsers,
+  SUM(TotalUsers) AS TotalUsers,
+  ROUND(
+    100.0 * SUM(ConvertedUsers) / NULLIF(SUM(TotalUsers), 0),
+    2
+  ) AS ConversionRatePct
+FROM Conversions
+GROUP BY Channel
+ORDER BY ConversionRatePct DESC;
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
         <li>Ensure that “Converted Users” and “Total Users” are defined consistently (e.g., based on event tracking, transactions, or lead stages).</li>
