@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://www.schematheory.com';
+const BASE_URL = 'https://www.schematheoryllc.com';
 const ROOT_DIR = __dirname;
 const KPI_DIR = path.join(ROOT_DIR, 'kpi_patterns');
 const sitemapPath = path.join(ROOT_DIR, 'sitemap.xml');
