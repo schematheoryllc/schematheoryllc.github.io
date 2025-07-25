@@ -74,7 +74,31 @@ DIVIDE(
       </div>
     </section>    
 
-  
+  <section class="kpi-section">
+  <h3>SQL Statement</h3>
+  <div class="code-toolbar">
+    <pre><code class="language-sql">SELECT
+  d.Month,
+  d.MonthID,
+  SUM(ms.Cost) AS TotalMarketingSpend,
+  COUNT(DISTINCT ca.CustomerID) AS CustomerAcquisitions,
+  SUM(ms.Cost) * 1.0 / NULLIF(COUNT(DISTINCT ca.CustomerID), 0) AS CAC
+FROM
+  DimDate d
+LEFT JOIN MarketingSpend ms
+  ON ms.SpendDate = d.Date
+LEFT JOIN CustomerAcquisition ca
+  ON ca.AcquisitionDate = d.Date
+GROUP BY
+  d.Month,
+  d.MonthID
+ORDER BY
+  d.MonthID  </code></pre>
+    <div class="toolbar">
+      <button class="copy-button" onclick="copyCode(this)">Copy</button>
+    </div>
+  </div>
+</section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>
