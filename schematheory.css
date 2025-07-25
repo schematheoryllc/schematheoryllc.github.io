@@ -270,10 +270,10 @@ footer {
 /* Code toolbar */
 .code-toolbar {
   position: relative;
-  background: #f6f8fa;
+  /*background: #f6f8fa;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 1rem;
+  border-radius: 6px;*/
+  padding: 0rem;
   margin-bottom: 1rem;
   overflow: auto;
 }

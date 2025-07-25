@@ -18,6 +18,15 @@
   gtag('config', 'G-0V3TFLKV37');
 </script>
 
+<!-- Prism.js syntax highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<!-- Language plugins (add more as needed) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dax.min.js"></script>
+
+
 </head>
 <body>
   <header>
@@ -53,8 +62,7 @@
       <h3>DAX Formulas</h3>
 
       <div class="code-toolbar">
-        <pre><code class="language-dax">Total Users = SUM('Conversions'[TotalUsers])
-        </code></pre>
+        <pre><code class="language-dax">Total Users = SUM('Conversions'[TotalUsers])        </code></pre>
         <div class="toolbar">
           <button class="copy-button" onclick="copyCode(this)">Copy</button>
           <button class="conventions-button" onclick="showConventions()">Conventions</button>
@@ -62,8 +70,7 @@
       </div>
 
       <div class="code-toolbar">
-        <pre><code class="language-dax">Converted Users = SUM('Conversions'[ConvertedUsers])
-        </code></pre>
+        <pre><code class="language-dax">Converted Users = SUM('Conversions'[ConvertedUsers])        </code></pre>
         <div class="toolbar">
           <button class="copy-button" onclick="copyCode(this)">Copy</button>
           <button class="conventions-button" onclick="showConventions()">Conventions</button>
@@ -75,8 +82,7 @@
 DIVIDE(
     [Converted Users], 
     [Total Users]
-)
-        </code></pre>
+)        </code></pre>
         <div class="toolbar">
           <button class="copy-button" onclick="copyCode(this)">Copy</button>
           <button class="conventions-button" onclick="showConventions()">Conventions</button>
