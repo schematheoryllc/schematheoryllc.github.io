@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="KPI Pattern Library: Sales vs. Last Year – compare daily sales to the same weekday one year ago." />
+  <title>KPI: Sales vs. Last Year | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0V3TFLKV37');</script>
+  <!-- Prism.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dax.min.js"></script>
+</head>
+<body>
+  <header><div class="container">
+      <h1>Schema Theory</h1>
+      <nav><ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul></nav>
+    </div></header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+    <h2>Sales vs. Last Year Same Weekday</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Shows daily sales compared to the same weekday one year ago (exactly 364 days prior), helping identify trends aligned by weekday behavior rather than calendar date.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-sales_vs_ly_same_weekday.png" alt="Sales vs Last Year Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Formulas</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Sales LY = 
+CALCULATE(
+    SUM(Sales[SalesAmount]),
+    DATEADD('Date'[Date], -364, DAY)
+)</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Change vs Last Year (%) = 
+VAR CurrSales = SUM(Sales[SalesAmount])
+RETURN
+IF(
+    ISBLANK(Sales[Sales LY]) || Sales[Sales LY] = 0,
+    BLANK(),
+    DIVIDE(CurrSales - Sales[Sales LY], Sales[Sales LY])
+)</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
+      <h3>SQL Examples</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">-- Daily comparison joined on same weekday last year
+SELECT
+  curr.OrderDate AS Date,
+  curr.TotalSales AS SalesThisYear,
+  prev.TotalSales AS SalesLY,
+  CASE 
+    WHEN prev.TotalSales = 0 OR prev.TotalSales IS NULL THEN NULL
+    ELSE (curr.TotalSales - prev.TotalSales) / prev.TotalSales
+  END AS ChangeVsLY
+FROM
+  SalesSummary curr
+LEFT JOIN SalesSummary prev
+  ON prev.OrderDate = DATEADD(DAY, -364, curr.OrderDate);
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+
+            <div class="code-toolbar">
+        <pre><code class="language-sql">-- Using window function:
+SELECT
+  OrderDate,
+  TotalSales,
+  LAG(TotalSales, 364) OVER (ORDER BY OrderDate) AS SalesLY,
+  CASE 
+    WHEN LAG(TotalSales, 364) OVER (ORDER BY OrderDate) = 0 
+         OR LAG(TotalSales, 364) OVER (ORDER BY OrderDate) IS NULL THEN NULL
+    ELSE (TotalSales - LAG(TotalSales, 364) OVER (ORDER BY OrderDate)) 
+         / LAG(TotalSales, 364) OVER (ORDER BY OrderDate)
+  END AS ChangeVsLY
+FROM SalesSummary;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>This approach shifts by exactly 364 days (52 weeks), preserving weekday alignment even across leap years.</li>
+        <li>Ensure your Date table contains consecutive days, marked as a proper Date table in Power BI.</li>
+        <li>Works best for retail or recurring-weekday comparisons — avoids comparing a weekday to a mismatched weekday across years.</li>
+        <li>Leap-day behavior (Feb 29) will shift appropriately (e.g. to Mar 1 one year later).</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-sales_vs_ly_same_weekday.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/kpi-sales_vs_ly_same_weekday.csv" class="button">Download Sales CSV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
+    </div></footer>
+  <script src="kpi-buttons.js"></script>
+</body>
+</html>
