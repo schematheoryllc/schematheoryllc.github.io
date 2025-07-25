@@ -116,6 +116,54 @@ DIVIDE(
     </section>
 
     <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">WITH calendar AS (
+  SELECT
+    DATE_TRUNC('month', FullDate)::DATE AS MonthStart,
+    DATE_TRUNC('month', FullDate)::DATE + INTERVAL '1 MONTH - 1 day' AS MonthEnd
+  FROM DimDate
+  GROUP BY DATE_TRUNC('month', FullDate)
+),
+churned AS (
+  SELECT
+    c.MonthStart,
+    COUNT(DISTINCT s.CustomerID) AS ChurnedCustomers
+  FROM calendar c
+  JOIN Subscriptions s
+    ON s.EndDate IS NOT NULL
+   AND s.EndDate BETWEEN c.MonthStart AND c.MonthEnd
+  GROUP BY c.MonthStart
+),
+active_at_start AS (
+  SELECT
+    c.MonthStart,
+    COUNT(DISTINCT s.CustomerID) AS CustomersAtStart
+  FROM calendar c
+  JOIN Subscriptions s
+    ON s.StartDate <= c.MonthStart
+   AND (s.EndDate IS NULL OR s.EndDate > c.MonthStart)
+  GROUP BY c.MonthStart
+)
+SELECT
+  a.MonthStart,
+  a.CustomersAtStart,
+  COALESCE(ch.ChurnedCustomers, 0) AS ChurnedCustomers,
+  CASE
+    WHEN a.CustomersAtStart = 0 THEN NULL
+    ELSE ROUND(100.0 * ch.ChurnedCustomers / a.CustomersAtStart, 2)
+  END AS ChurnRatePct
+FROM active_at_start a
+LEFT JOIN churned ch ON a.MonthStart = ch.MonthStart
+ORDER BY a.MonthStart;
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
         <li><b>Churned Customers</b> are those who were active in the previous period but are no longer active in the current period.</li>

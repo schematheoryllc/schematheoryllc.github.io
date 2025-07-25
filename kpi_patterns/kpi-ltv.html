@@ -79,6 +79,20 @@ CALCULATE(
         </div>
       </div>
     </section>
+    
+    <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">SELECT
+  SUM(s.Revenue) / NULLIF(COUNT(DISTINCT c.CustomerID), 0) AS LTV
+FROM Sales s
+JOIN Customer c ON s.CustomerID = c.CustomerID;
+</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>

@@ -76,20 +76,20 @@
       </div>
     </section>
 
-<section class="kpi-section">
-  <h3>SQL Statement</h3>
-  <div class="code-toolbar">
-    <pre><code class="language-sql">SELECT 
-  SUM(Revenue) * 1.0 / COUNT(DISTINCT UserID) AS ARPU
-FROM 
-  Sales
-WHERE 
-  Revenue IS NOT NULL AND UserID IS NOT NULL;    </code></pre>
-    <div class="toolbar">
-      <button class="copy-button" onclick="copyCode(this)">Copy</button>
-    </div>
-  </div>
-</section>
+    <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">SELECT 
+      SUM(Revenue) * 1.0 / COUNT(DISTINCT UserID) AS ARPU
+    FROM 
+      Sales
+    WHERE 
+      Revenue IS NOT NULL AND UserID IS NOT NULL;    </code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
 
     <section class="kpi-section">
       <h3>Usage Notes</h3>

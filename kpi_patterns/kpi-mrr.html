@@ -87,6 +87,37 @@ CALCULATE (
       </div>
     </section>   
 
+    <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">WITH calendar AS (
+  SELECT
+    DATE_TRUNC('month', d)::DATE AS MonthStart,
+    (DATE_TRUNC('month', d) + INTERVAL '1 MONTH - 1 day')::DATE AS MonthEnd
+  FROM generate_series(DATE '2022-01-01', DATE '2024-12-31', INTERVAL '1 MONTH') AS d
+),
+active_subs AS (
+  SELECT
+    c.MonthStart,
+    c.MonthEnd,
+    s.CustomerID,
+    s.MonthlyFee
+  FROM calendar c
+  JOIN Subscriptions s
+    ON s.StartDate <= c.MonthEnd
+   AND (s.EndDate IS NULL OR s.EndDate >= c.MonthStart)
+)
+SELECT
+  MonthStart,
+  SUM(MonthlyFee) AS MRR
+FROM active_subs
+GROUP BY MonthStart
+ORDER BY MonthStart;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
   
 
 <section class="kpi-section">

@@ -75,6 +75,25 @@ TOTALYTD(
     </section>
 
     <section class="kpi-section">
+      <h3>SQL Statement</h3>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">SELECT
+  s.SaleDate,
+  s.RegionID,
+  SUM(s.SalesAmount) OVER (
+    PARTITION BY s.RegionID, EXTRACT(YEAR FROM s.SaleDate)
+    ORDER BY s.SaleDate
+    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+  ) AS YTD_Sales
+FROM Sales s
+ORDER BY s.RegionID, s.SaleDate;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
       <h3>Usage Notes</h3>
       <ul>
         <li>Use with a properly marked Date table for correct time intelligence behavior.</li>
