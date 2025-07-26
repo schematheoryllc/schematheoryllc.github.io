@@ -1,0 +1,1201 @@
+QueryID,QueryText,ExecutionDate,DurationMs,UserName,DatabaseName,IndexScan,TableScan
+Q0026,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-11,111.39,developer,FinanceDB,True,False
+Q0108,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-06,238.18,developer,InventoryDB,True,False
+Q0078,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-04,91.96,analyst1,InventoryDB,True,False
+Q0198,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-17,46.68,report_viewer,FinanceDB,False,False
+Q0105,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-04,96.36,etl_user,SalesDB,True,False
+Q0141,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-30,45.05,etl_user,FinanceDB,True,False
+Q0160,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-11,107.73,etl_user,FinanceDB,False,True
+Q0181,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-17,381.53,analyst1,HRDB,False,False
+Q0009,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-05,120.64,developer,FinanceDB,False,True
+Q0098,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-15,381.3,report_viewer,InventoryDB,True,False
+Q0179,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-06,427.09,developer,SalesDB,False,False
+Q0094,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-27,185.64,report_viewer,InventoryDB,True,False
+Q0185,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-12,197.18,etl_user,FinanceDB,True,False
+Q0007,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-27,52.75,report_viewer,SalesDB,True,False
+Q0188,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-08,253.52,developer,InventoryDB,True,False
+Q0140,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-17,135.19,report_viewer,HRDB,True,False
+Q0028,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-21,335.91,analyst1,HRDB,True,False
+Q0035,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-19,17.28,developer,HRDB,True,False
+Q0181,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-01,469.33,admin,SalesDB,True,False
+Q0148,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-18,241.41,analyst1,HRDB,True,False
+Q0036,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-20,53.81,admin,HRDB,True,False
+Q0180,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-24,297.35,report_viewer,SalesDB,False,False
+Q0129,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-08,182.02,report_viewer,HRDB,True,False
+Q0143,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-25,143.59,admin,FinanceDB,False,False
+Q0021,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-28,500.16,etl_user,SalesDB,False,False
+Q0083,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-27,125.7,etl_user,InventoryDB,True,False
+Q0076,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-12,225.71,etl_user,SalesDB,False,True
+Q0143,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-04,90.69,report_viewer,InventoryDB,True,False
+Q0012,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-14,307.34,admin,HRDB,False,False
+Q0155,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-29,308.44,report_viewer,InventoryDB,True,False
+Q0172,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-18,416.9,report_viewer,SalesDB,False,False
+Q0084,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-29,307.47,report_viewer,SalesDB,False,False
+Q0120,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-19,184.4,developer,InventoryDB,False,True
+Q0142,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-23,151.42,etl_user,InventoryDB,False,True
+Q0010,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-20,156.37,analyst1,FinanceDB,False,False
+Q0197,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-25,380.99,admin,SalesDB,True,False
+Q0125,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-17,301.54,etl_user,InventoryDB,False,False
+Q0008,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-29,79.72,analyst1,HRDB,False,False
+Q0166,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-29,11.46,developer,SalesDB,True,False
+Q0053,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-06,59.75,analyst1,SalesDB,True,False
+Q0181,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-15,154.71,admin,InventoryDB,True,False
+Q0111,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-24,218.82,report_viewer,FinanceDB,False,False
+Q0107,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-30,337.5,analyst1,FinanceDB,True,False
+Q0160,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-24,193.71,report_viewer,InventoryDB,True,False
+Q0026,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-02,131.36,admin,SalesDB,True,False
+Q0117,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-07,38.4,etl_user,InventoryDB,True,False
+Q0180,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-19,48.44,admin,HRDB,True,False
+Q0152,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-22,340.65,etl_user,FinanceDB,True,False
+Q0142,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-27,711.94,developer,HRDB,True,False
+Q0163,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-05,309.84,developer,SalesDB,False,False
+Q0161,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-27,6.54,report_viewer,InventoryDB,True,False
+Q0002,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-13,238.97,admin,FinanceDB,False,False
+Q0063,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-26,67.33,admin,SalesDB,True,False
+Q0032,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-05,167.06,analyst1,InventoryDB,False,False
+Q0129,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-19,143.42,analyst1,HRDB,True,False
+Q0185,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-01,151.14,analyst1,HRDB,False,False
+Q0084,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-01,85.15,admin,InventoryDB,True,False
+Q0016,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-28,111.07,admin,InventoryDB,True,False
+Q0197,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-28,248.13,etl_user,HRDB,False,True
+Q0006,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-17,195.95,developer,FinanceDB,True,False
+Q0120,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-02,82.64,analyst1,FinanceDB,True,False
+Q0135,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-29,157.3,admin,FinanceDB,True,False
+Q0115,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-20,60.54,etl_user,FinanceDB,True,False
+Q0138,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-05,551.55,admin,HRDB,True,False
+Q0100,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-25,164.78,developer,FinanceDB,True,False
+Q0029,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-28,188.27,analyst1,HRDB,False,False
+Q0187,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-14,327.25,etl_user,SalesDB,True,False
+Q0174,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-06,55.34,report_viewer,FinanceDB,True,False
+Q0054,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-10,232.06,developer,InventoryDB,True,False
+Q0037,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-06,244.89,developer,FinanceDB,False,False
+Q0013,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-08,151.19,analyst1,SalesDB,True,False
+Q0116,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-04,275.32,etl_user,FinanceDB,True,False
+Q0001,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-13,37.57,etl_user,FinanceDB,True,False
+Q0041,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-27,322.11,developer,FinanceDB,False,False
+Q0105,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-12,86.52,etl_user,HRDB,True,False
+Q0126,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-04,55.61,developer,HRDB,True,False
+Q0021,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-07,86.34,report_viewer,InventoryDB,True,False
+Q0184,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-29,13.02,report_viewer,SalesDB,True,False
+Q0010,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-08,135.39,etl_user,FinanceDB,False,False
+Q0117,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-24,211.75,admin,FinanceDB,False,False
+Q0055,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-10,98.49,admin,InventoryDB,False,False
+Q0102,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-13,261.32,developer,SalesDB,False,False
+Q0108,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-27,163.29,etl_user,InventoryDB,False,False
+Q0024,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-12,213.21,admin,FinanceDB,True,False
+Q0065,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-13,286.56,admin,FinanceDB,True,False
+Q0051,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-22,109.4,etl_user,SalesDB,True,False
+Q0095,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-22,116.69,admin,HRDB,True,False
+Q0171,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-05,105.21,developer,FinanceDB,False,False
+Q0100,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-09,41.95,report_viewer,HRDB,False,False
+Q0144,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-14,157.93,analyst1,FinanceDB,True,False
+Q0039,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-04,238.64,etl_user,SalesDB,True,False
+Q0076,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-14,132.82,report_viewer,InventoryDB,True,False
+Q0053,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-09,103.78,analyst1,SalesDB,True,False
+Q0104,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-03,162.32,etl_user,SalesDB,True,False
+Q0027,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-17,40.26,admin,HRDB,False,False
+Q0041,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-19,254.0,analyst1,FinanceDB,True,False
+Q0082,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-01,212.88,report_viewer,FinanceDB,True,False
+Q0131,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-17,112.0,developer,SalesDB,True,False
+Q0140,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-03,80.2,analyst1,HRDB,True,False
+Q0161,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-06,157.88,analyst1,InventoryDB,True,False
+Q0045,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-18,251.6,etl_user,InventoryDB,False,False
+Q0118,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-16,283.45,etl_user,FinanceDB,False,False
+Q0109,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-28,176.51,admin,InventoryDB,True,False
+Q0138,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-01,118.68,report_viewer,FinanceDB,False,False
+Q0189,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-23,350.12,developer,HRDB,True,False
+Q0026,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-10,149.1,admin,FinanceDB,False,True
+Q0112,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-03,66.89,etl_user,InventoryDB,True,False
+Q0038,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-05,362.03,etl_user,HRDB,False,False
+Q0015,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-15,165.46,analyst1,HRDB,False,True
+Q0026,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-31,308.81,developer,SalesDB,False,False
+Q0018,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-03,321.78,analyst1,SalesDB,False,False
+Q0060,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-16,18.54,report_viewer,FinanceDB,True,False
+Q0016,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-20,523.13,analyst1,FinanceDB,True,False
+Q0169,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-22,86.06,developer,FinanceDB,True,False
+Q0151,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-29,221.73,developer,SalesDB,False,False
+Q0090,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-14,227.96,etl_user,SalesDB,False,False
+Q0150,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-26,173.67,analyst1,HRDB,True,False
+Q0001,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-14,52.91,etl_user,SalesDB,False,False
+Q0065,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-09,149.22,admin,InventoryDB,False,False
+Q0101,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-27,198.39,analyst1,HRDB,False,False
+Q0033,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-22,64.85,etl_user,SalesDB,True,False
+Q0163,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-26,109.54,report_viewer,SalesDB,True,False
+Q0040,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-17,573.06,developer,HRDB,True,False
+Q0117,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-28,293.43,report_viewer,FinanceDB,True,False
+Q0081,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-18,410.11,analyst1,InventoryDB,True,False
+Q0063,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-08,418.14,report_viewer,InventoryDB,True,False
+Q0016,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-16,221.35,etl_user,FinanceDB,False,True
+Q0090,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-10,201.68,analyst1,HRDB,False,True
+Q0169,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-09,163.98,developer,HRDB,True,False
+Q0067,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-07,557.6,etl_user,SalesDB,True,False
+Q0161,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-01,542.55,developer,FinanceDB,True,False
+Q0165,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-22,252.65,analyst1,InventoryDB,True,False
+Q0013,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-02,318.26,admin,HRDB,False,True
+Q0094,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-14,126.24,analyst1,FinanceDB,False,False
+Q0179,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-02,461.4,report_viewer,SalesDB,True,False
+Q0188,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-12,513.18,etl_user,InventoryDB,True,False
+Q0074,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-01,322.3,etl_user,HRDB,False,True
+Q0106,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-24,190.46,analyst1,SalesDB,True,False
+Q0198,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-13,90.03,admin,HRDB,False,False
+Q0052,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-06,529.98,developer,SalesDB,True,False
+Q0135,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-29,54.16,admin,HRDB,True,False
+Q0112,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-26,46.28,etl_user,FinanceDB,True,False
+Q0077,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-11,113.9,analyst1,InventoryDB,False,False
+Q0028,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-12,144.87,admin,HRDB,True,False
+Q0086,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-27,263.12,admin,FinanceDB,False,False
+Q0165,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-13,24.4,analyst1,SalesDB,True,False
+Q0056,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-12,156.13,developer,HRDB,True,False
+Q0058,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-12,304.77,report_viewer,FinanceDB,True,False
+Q0093,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-20,273.76,analyst1,InventoryDB,True,False
+Q0188,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-01,122.92,analyst1,SalesDB,False,True
+Q0092,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-17,59.93,developer,FinanceDB,True,False
+Q0164,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-21,109.49,analyst1,FinanceDB,True,False
+Q0002,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-10,121.15,analyst1,InventoryDB,False,False
+Q0068,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-12,101.92,admin,SalesDB,True,False
+Q0004,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-14,32.12,admin,HRDB,False,False
+Q0040,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-07,258.68,analyst1,InventoryDB,True,False
+Q0047,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-21,290.17,admin,SalesDB,True,False
+Q0170,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-10,188.95,admin,HRDB,False,False
+Q0028,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-25,156.88,developer,InventoryDB,False,False
+Q0185,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-23,210.63,analyst1,HRDB,True,False
+Q0094,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-13,398.74,admin,HRDB,True,False
+Q0118,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-18,94.68,admin,FinanceDB,False,True
+Q0154,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-13,248.91,etl_user,SalesDB,True,False
+Q0018,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-26,169.21,etl_user,HRDB,True,False
+Q0151,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-28,272.28,developer,InventoryDB,True,False
+Q0034,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-07,168.1,admin,FinanceDB,False,True
+Q0196,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-02,111.88,analyst1,HRDB,True,False
+Q0117,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-19,233.45,developer,InventoryDB,True,False
+Q0144,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-28,99.1,report_viewer,HRDB,False,True
+Q0175,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-10,337.51,etl_user,FinanceDB,False,True
+Q0148,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-22,97.36,analyst1,HRDB,True,False
+Q0047,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-10,174.65,analyst1,InventoryDB,False,True
+Q0152,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-24,439.54,analyst1,FinanceDB,True,False
+Q0041,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-19,189.2,report_viewer,FinanceDB,True,False
+Q0167,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-03,165.02,report_viewer,InventoryDB,True,False
+Q0051,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-23,553.74,etl_user,FinanceDB,True,False
+Q0196,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-08,128.93,etl_user,SalesDB,True,False
+Q0055,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-27,90.13,etl_user,HRDB,False,True
+Q0004,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-26,161.2,report_viewer,HRDB,True,False
+Q0173,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-08,96.23,etl_user,HRDB,False,False
+Q0155,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-30,172.59,developer,InventoryDB,False,False
+Q0042,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-07,201.4,etl_user,FinanceDB,True,False
+Q0062,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-13,358.28,report_viewer,SalesDB,False,False
+Q0082,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-20,90.84,developer,InventoryDB,False,False
+Q0187,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-15,238.42,etl_user,FinanceDB,True,False
+Q0159,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-27,273.2,developer,SalesDB,False,False
+Q0084,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-26,19.73,developer,InventoryDB,True,False
+Q0157,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-17,237.02,admin,HRDB,True,False
+Q0123,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-08,894.93,admin,FinanceDB,False,False
+Q0107,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-16,246.89,report_viewer,SalesDB,True,False
+Q0052,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-02,150.73,etl_user,InventoryDB,True,False
+Q0102,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-13,83.34,admin,SalesDB,True,False
+Q0028,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-29,114.71,analyst1,SalesDB,False,False
+Q0199,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-02,329.04,admin,FinanceDB,True,False
+Q0121,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-13,474.61,analyst1,HRDB,False,False
+Q0016,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-27,130.93,etl_user,SalesDB,True,False
+Q0079,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-11,195.63,report_viewer,SalesDB,True,False
+Q0077,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-04,183.96,developer,HRDB,True,False
+Q0182,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-16,281.33,admin,SalesDB,True,False
+Q0152,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-06,282.72,report_viewer,HRDB,True,False
+Q0073,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-07,43.15,developer,SalesDB,True,False
+Q0007,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-27,97.12,report_viewer,FinanceDB,True,False
+Q0057,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-19,348.5,report_viewer,InventoryDB,False,False
+Q0112,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-20,396.71,etl_user,FinanceDB,True,False
+Q0148,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-27,165.4,etl_user,InventoryDB,True,False
+Q0140,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-04,120.05,developer,InventoryDB,True,False
+Q0185,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-08,285.55,developer,SalesDB,True,False
+Q0035,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-21,69.18,admin,InventoryDB,True,False
+Q0182,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-28,13.88,developer,SalesDB,False,False
+Q0173,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-19,182.31,analyst1,InventoryDB,True,False
+Q0031,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-27,220.13,etl_user,SalesDB,False,False
+Q0178,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-07,189.21,developer,InventoryDB,True,False
+Q0095,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-15,167.04,analyst1,InventoryDB,False,False
+Q0128,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-15,309.58,analyst1,HRDB,True,False
+Q0025,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-08,58.79,admin,SalesDB,True,False
+Q0006,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-15,264.81,etl_user,InventoryDB,True,False
+Q0070,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-25,671.18,etl_user,FinanceDB,False,False
+Q0199,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-14,81.62,admin,HRDB,True,False
+Q0124,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-29,531.22,admin,HRDB,True,False
+Q0123,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-28,252.8,developer,FinanceDB,True,False
+Q0104,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-11,128.79,report_viewer,FinanceDB,True,False
+Q0038,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-03,93.63,etl_user,HRDB,True,False
+Q0199,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-15,252.99,analyst1,InventoryDB,True,False
+Q0099,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-04,351.13,analyst1,InventoryDB,True,False
+Q0067,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-25,49.75,report_viewer,SalesDB,True,False
+Q0113,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-10,108.63,report_viewer,InventoryDB,False,False
+Q0156,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-01,120.08,developer,InventoryDB,True,False
+Q0147,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-14,512.3,admin,InventoryDB,False,False
+Q0012,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-05,79.93,developer,HRDB,True,False
+Q0012,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-23,150.03,etl_user,SalesDB,False,False
+Q0191,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-11,212.58,report_viewer,InventoryDB,False,False
+Q0081,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-23,348.28,admin,InventoryDB,True,False
+Q0084,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-18,346.61,report_viewer,SalesDB,False,False
+Q0152,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-14,474.74,analyst1,HRDB,False,True
+Q0161,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-22,110.31,report_viewer,FinanceDB,False,False
+Q0096,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-16,330.69,admin,FinanceDB,True,False
+Q0129,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-21,32.65,developer,InventoryDB,False,False
+Q0171,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-08,207.21,analyst1,FinanceDB,True,False
+Q0011,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-10,126.24,analyst1,SalesDB,True,False
+Q0024,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-20,612.35,developer,SalesDB,True,False
+Q0032,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-27,294.32,etl_user,InventoryDB,True,False
+Q0073,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-01,228.2,developer,SalesDB,False,False
+Q0014,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-04,347.46,admin,FinanceDB,True,False
+Q0176,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-18,205.35,developer,HRDB,True,False
+Q0016,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-24,291.49,developer,FinanceDB,True,False
+Q0132,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-16,206.44,report_viewer,FinanceDB,False,False
+Q0005,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-02,329.71,report_viewer,HRDB,False,False
+Q0051,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-24,60.66,report_viewer,SalesDB,True,False
+Q0005,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-16,83.0,developer,HRDB,True,False
+Q0024,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-30,274.36,developer,SalesDB,False,False
+Q0100,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-28,435.23,etl_user,HRDB,True,False
+Q0025,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-03,187.36,analyst1,FinanceDB,True,False
+Q0122,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-18,149.25,report_viewer,InventoryDB,True,False
+Q0016,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-18,464.89,analyst1,FinanceDB,False,False
+Q0060,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-23,322.89,developer,FinanceDB,True,False
+Q0039,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-01,203.41,etl_user,FinanceDB,True,False
+Q0073,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-23,66.47,analyst1,FinanceDB,True,False
+Q0043,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-20,102.98,report_viewer,SalesDB,True,False
+Q0001,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-29,357.53,admin,InventoryDB,True,False
+Q0033,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-25,66.62,etl_user,SalesDB,True,False
+Q0170,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-08,372.04,analyst1,HRDB,True,False
+Q0117,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-11,78.33,analyst1,HRDB,True,False
+Q0056,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-15,248.33,admin,HRDB,False,False
+Q0112,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-11,382.7,etl_user,InventoryDB,True,False
+Q0139,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-19,192.8,developer,InventoryDB,False,False
+Q0189,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-07,60.25,developer,InventoryDB,True,False
+Q0119,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-20,52.16,report_viewer,InventoryDB,False,False
+Q0023,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-23,80.47,developer,SalesDB,False,True
+Q0007,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-26,95.5,report_viewer,HRDB,False,False
+Q0122,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-31,223.04,etl_user,HRDB,True,False
+Q0112,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-19,278.81,admin,SalesDB,False,True
+Q0003,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-25,345.03,report_viewer,HRDB,True,False
+Q0139,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-02,253.76,report_viewer,HRDB,False,False
+Q0063,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-21,38.25,analyst1,SalesDB,True,False
+Q0149,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-19,355.54,report_viewer,HRDB,False,False
+Q0128,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-01,341.44,developer,HRDB,True,False
+Q0097,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-09,327.27,etl_user,HRDB,True,False
+Q0062,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-15,391.12,admin,InventoryDB,True,False
+Q0157,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-14,129.93,admin,InventoryDB,True,False
+Q0137,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-18,370.05,developer,HRDB,True,False
+Q0076,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-10,152.54,admin,HRDB,True,False
+Q0197,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-16,288.54,etl_user,HRDB,False,True
+Q0136,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-27,161.72,analyst1,InventoryDB,False,True
+Q0057,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-21,45.21,developer,SalesDB,False,False
+Q0061,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-28,135.77,report_viewer,HRDB,False,False
+Q0098,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-20,325.09,developer,HRDB,True,False
+Q0149,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-18,317.41,etl_user,FinanceDB,True,False
+Q0088,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-29,69.28,developer,SalesDB,True,False
+Q0103,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-27,153.08,etl_user,FinanceDB,True,False
+Q0052,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-13,508.55,admin,InventoryDB,True,False
+Q0156,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-01,347.53,etl_user,InventoryDB,True,False
+Q0104,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-20,221.68,analyst1,SalesDB,True,False
+Q0147,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-14,46.98,etl_user,InventoryDB,True,False
+Q0058,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-11,54.71,developer,FinanceDB,False,True
+Q0112,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-26,342.9,developer,HRDB,True,False
+Q0053,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-02,173.44,admin,HRDB,False,False
+Q0146,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-20,243.43,analyst1,HRDB,False,True
+Q0170,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-30,63.19,analyst1,FinanceDB,False,True
+Q0003,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-13,213.75,admin,FinanceDB,True,False
+Q0055,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-25,283.68,developer,HRDB,True,False
+Q0136,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-26,242.8,developer,FinanceDB,False,True
+Q0044,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-13,191.1,admin,SalesDB,True,False
+Q0188,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-04,203.17,report_viewer,InventoryDB,True,False
+Q0101,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-25,88.0,analyst1,HRDB,True,False
+Q0180,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-15,68.28,analyst1,InventoryDB,True,False
+Q0138,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-20,125.4,admin,HRDB,True,False
+Q0173,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-20,119.32,etl_user,InventoryDB,True,False
+Q0091,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-16,314.84,analyst1,InventoryDB,True,False
+Q0035,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-11,60.14,report_viewer,HRDB,True,False
+Q0017,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-16,116.62,etl_user,HRDB,False,False
+Q0129,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-29,517.63,developer,HRDB,True,False
+Q0097,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-27,327.96,admin,FinanceDB,False,True
+Q0137,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-19,343.89,analyst1,HRDB,True,False
+Q0121,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-09,120.56,admin,SalesDB,True,False
+Q0087,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-09,164.69,analyst1,InventoryDB,False,True
+Q0181,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-13,372.15,admin,FinanceDB,False,False
+Q0189,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-18,148.43,analyst1,SalesDB,True,False
+Q0122,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-26,300.76,analyst1,FinanceDB,True,False
+Q0198,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-19,266.98,admin,HRDB,True,False
+Q0059,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-29,78.31,analyst1,HRDB,True,False
+Q0157,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-10,241.97,developer,SalesDB,False,True
+Q0179,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-22,239.91,developer,HRDB,False,False
+Q0142,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-18,270.71,admin,HRDB,True,False
+Q0182,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-06,245.38,report_viewer,HRDB,False,False
+Q0014,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-24,283.87,admin,InventoryDB,True,False
+Q0052,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-17,49.48,admin,FinanceDB,True,False
+Q0126,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-20,87.15,developer,InventoryDB,True,False
+Q0092,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-22,232.92,admin,SalesDB,False,False
+Q0103,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-09,372.6,admin,HRDB,True,False
+Q0033,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-18,216.13,developer,HRDB,True,False
+Q0168,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-26,55.36,etl_user,FinanceDB,True,False
+Q0002,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-29,318.47,admin,FinanceDB,True,False
+Q0074,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-20,245.17,developer,SalesDB,True,False
+Q0166,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-10,365.31,etl_user,InventoryDB,True,False
+Q0088,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-04,99.95,developer,FinanceDB,True,False
+Q0065,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-15,296.88,admin,FinanceDB,True,False
+Q0042,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-18,175.99,report_viewer,HRDB,True,False
+Q0074,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-17,444.7,developer,InventoryDB,True,False
+Q0130,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-02,231.06,developer,HRDB,True,False
+Q0004,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-30,146.39,report_viewer,InventoryDB,True,False
+Q0080,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-01,3.86,etl_user,HRDB,True,False
+Q0062,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-27,484.86,analyst1,SalesDB,False,False
+Q0130,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-23,202.61,analyst1,FinanceDB,False,False
+Q0198,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-24,81.64,admin,HRDB,True,False
+Q0028,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-21,252.26,admin,InventoryDB,False,False
+Q0047,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-02,73.74,admin,HRDB,False,True
+Q0013,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-21,389.44,etl_user,InventoryDB,False,True
+Q0111,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-07,512.62,admin,HRDB,True,False
+Q0071,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-25,46.62,etl_user,FinanceDB,True,False
+Q0180,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-18,265.01,etl_user,SalesDB,True,False
+Q0194,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-16,90.8,etl_user,HRDB,False,False
+Q0086,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-03,179.45,etl_user,FinanceDB,False,False
+Q0127,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-13,287.91,report_viewer,HRDB,True,False
+Q0081,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-13,131.58,analyst1,SalesDB,True,False
+Q0146,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-15,88.37,developer,InventoryDB,True,False
+Q0117,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-26,190.93,analyst1,SalesDB,True,False
+Q0088,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-20,148.39,report_viewer,FinanceDB,False,True
+Q0045,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-10,161.53,developer,HRDB,True,False
+Q0098,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-09,481.74,analyst1,InventoryDB,False,False
+Q0061,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-02,112.76,admin,InventoryDB,True,False
+Q0164,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-24,132.7,developer,HRDB,False,False
+Q0119,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-13,89.54,admin,InventoryDB,True,False
+Q0108,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-15,616.68,report_viewer,HRDB,True,False
+Q0097,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-13,145.03,report_viewer,InventoryDB,False,False
+Q0085,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-14,191.57,admin,FinanceDB,True,False
+Q0072,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-25,69.5,analyst1,HRDB,False,True
+Q0175,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-30,372.84,admin,FinanceDB,True,False
+Q0156,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-28,487.06,admin,SalesDB,True,False
+Q0015,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-26,292.72,developer,HRDB,False,False
+Q0145,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-05,254.27,report_viewer,FinanceDB,True,False
+Q0141,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-20,312.87,analyst1,FinanceDB,True,False
+Q0127,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-23,107.1,admin,SalesDB,False,False
+Q0007,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-01,140.16,developer,SalesDB,True,False
+Q0150,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-07,137.51,etl_user,SalesDB,False,True
+Q0024,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-22,26.15,report_viewer,SalesDB,True,False
+Q0189,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-29,259.03,report_viewer,HRDB,False,True
+Q0065,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-17,79.7,developer,SalesDB,True,False
+Q0003,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-24,95.52,report_viewer,InventoryDB,True,False
+Q0197,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-18,36.25,analyst1,InventoryDB,True,False
+Q0030,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-22,74.99,analyst1,InventoryDB,False,False
+Q0164,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-19,83.77,analyst1,HRDB,True,False
+Q0046,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-21,68.27,developer,HRDB,True,False
+Q0200,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-03,214.75,etl_user,HRDB,True,False
+Q0094,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-15,117.59,etl_user,SalesDB,True,False
+Q0060,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-15,174.03,developer,SalesDB,True,False
+Q0052,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-05,49.66,admin,FinanceDB,True,False
+Q0120,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-30,193.37,admin,SalesDB,True,False
+Q0066,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-02,953.36,etl_user,InventoryDB,True,False
+Q0049,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-01,327.8,admin,SalesDB,True,False
+Q0110,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-01,584.33,etl_user,SalesDB,True,False
+Q0167,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-12,141.29,report_viewer,FinanceDB,True,False
+Q0116,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-07,126.58,report_viewer,FinanceDB,True,False
+Q0008,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-19,249.95,developer,SalesDB,True,False
+Q0110,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-13,145.29,analyst1,FinanceDB,True,False
+Q0065,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-02,70.2,admin,InventoryDB,True,False
+Q0139,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-03,126.08,developer,HRDB,True,False
+Q0103,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-22,269.53,developer,FinanceDB,True,False
+Q0032,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-20,128.6,analyst1,SalesDB,True,False
+Q0159,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-12,41.46,admin,FinanceDB,True,False
+Q0048,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-22,63.89,developer,HRDB,True,False
+Q0174,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-09,99.93,report_viewer,SalesDB,False,True
+Q0188,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-02,163.83,developer,SalesDB,False,True
+Q0036,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-19,77.97,etl_user,InventoryDB,True,False
+Q0001,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-09,468.41,admin,FinanceDB,True,False
+Q0173,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-17,70.78,analyst1,SalesDB,False,False
+Q0093,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-19,22.28,report_viewer,InventoryDB,True,False
+Q0009,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-12,209.08,developer,SalesDB,True,False
+Q0149,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-07,155.11,etl_user,InventoryDB,False,True
+Q0052,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-17,293.75,etl_user,SalesDB,True,False
+Q0139,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-24,530.36,admin,HRDB,True,False
+Q0025,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-08,34.06,developer,FinanceDB,True,False
+Q0169,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-07,123.23,developer,HRDB,False,False
+Q0045,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-27,66.02,developer,SalesDB,True,False
+Q0080,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-12,124.97,etl_user,InventoryDB,True,False
+Q0100,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-20,216.62,developer,HRDB,True,False
+Q0148,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-27,44.68,etl_user,InventoryDB,True,False
+Q0161,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-07,125.77,admin,HRDB,False,False
+Q0187,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-17,276.38,admin,FinanceDB,True,False
+Q0006,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-09,567.4,etl_user,HRDB,True,False
+Q0062,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-10,38.17,developer,InventoryDB,True,False
+Q0036,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-04,205.43,report_viewer,FinanceDB,True,False
+Q0084,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-08,287.48,analyst1,InventoryDB,True,False
+Q0034,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-28,120.92,admin,HRDB,False,False
+Q0056,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-29,80.65,analyst1,InventoryDB,True,False
+Q0026,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-04,136.93,developer,InventoryDB,True,False
+Q0173,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-14,113.21,analyst1,SalesDB,True,False
+Q0090,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-15,133.79,report_viewer,InventoryDB,True,False
+Q0030,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-14,185.17,report_viewer,FinanceDB,True,False
+Q0173,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-28,265.73,etl_user,InventoryDB,True,False
+Q0113,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-09,153.39,report_viewer,InventoryDB,True,False
+Q0052,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-15,36.95,report_viewer,FinanceDB,True,False
+Q0134,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-02,371.98,admin,InventoryDB,False,False
+Q0081,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-01,386.78,developer,FinanceDB,True,False
+Q0180,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-06,70.72,etl_user,FinanceDB,True,False
+Q0034,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-25,228.42,developer,HRDB,True,False
+Q0044,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-09,71.87,admin,HRDB,True,False
+Q0023,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-06,115.38,report_viewer,InventoryDB,True,False
+Q0107,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-10,404.98,admin,HRDB,True,False
+Q0094,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-06,86.19,analyst1,InventoryDB,True,False
+Q0153,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-18,146.24,etl_user,SalesDB,True,False
+Q0100,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-16,376.14,admin,FinanceDB,True,False
+Q0030,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-19,28.69,etl_user,SalesDB,True,False
+Q0132,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-04,121.46,developer,FinanceDB,True,False
+Q0152,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-28,367.16,admin,SalesDB,False,False
+Q0195,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-14,155.65,etl_user,SalesDB,True,False
+Q0116,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-25,86.17,admin,InventoryDB,True,False
+Q0143,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-21,128.28,etl_user,SalesDB,True,False
+Q0104,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-24,139.57,developer,SalesDB,True,False
+Q0186,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-13,166.52,developer,FinanceDB,False,False
+Q0126,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-13,268.45,etl_user,SalesDB,True,False
+Q0027,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-06,217.19,etl_user,InventoryDB,True,False
+Q0171,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-30,110.77,analyst1,InventoryDB,True,False
+Q0140,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-06,80.63,report_viewer,SalesDB,False,True
+Q0129,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-12,135.45,developer,HRDB,True,False
+Q0086,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-22,123.64,report_viewer,SalesDB,False,True
+Q0114,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-02,286.58,etl_user,FinanceDB,True,False
+Q0039,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-03,32.75,etl_user,FinanceDB,True,False
+Q0199,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-19,199.03,etl_user,FinanceDB,False,False
+Q0192,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-15,61.38,analyst1,SalesDB,False,True
+Q0127,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-14,185.32,developer,FinanceDB,True,False
+Q0030,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-18,378.39,etl_user,InventoryDB,True,False
+Q0181,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-27,259.97,admin,FinanceDB,True,False
+Q0058,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-15,422.57,report_viewer,HRDB,True,False
+Q0177,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-11,252.27,admin,HRDB,True,False
+Q0199,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-11,297.23,report_viewer,HRDB,True,False
+Q0050,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-19,74.01,admin,InventoryDB,False,True
+Q0018,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-12,58.25,etl_user,InventoryDB,False,False
+Q0168,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-01,210.42,developer,InventoryDB,False,True
+Q0192,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-30,103.57,etl_user,InventoryDB,True,False
+Q0183,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-10,438.72,admin,SalesDB,False,False
+Q0030,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-04,202.51,report_viewer,InventoryDB,False,False
+Q0185,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-21,52.44,analyst1,FinanceDB,False,False
+Q0096,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-05,295.56,analyst1,SalesDB,True,False
+Q0103,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-13,323.77,developer,HRDB,True,False
+Q0164,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-27,169.07,report_viewer,InventoryDB,True,False
+Q0113,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-17,321.54,analyst1,SalesDB,True,False
+Q0125,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-08,381.57,analyst1,SalesDB,True,False
+Q0036,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-04,355.45,analyst1,HRDB,True,False
+Q0076,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-11,143.86,admin,SalesDB,True,False
+Q0178,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-06,37.47,report_viewer,InventoryDB,False,False
+Q0145,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-02,87.51,report_viewer,SalesDB,True,False
+Q0102,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-19,115.89,report_viewer,InventoryDB,True,False
+Q0121,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-11,831.73,analyst1,FinanceDB,True,False
+Q0151,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-09,137.63,analyst1,FinanceDB,True,False
+Q0094,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-17,120.33,etl_user,FinanceDB,True,False
+Q0192,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-19,138.09,analyst1,SalesDB,False,False
+Q0167,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-21,148.82,report_viewer,FinanceDB,False,False
+Q0005,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-03,150.35,analyst1,SalesDB,True,False
+Q0187,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-18,518.17,etl_user,HRDB,True,False
+Q0090,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-22,790.08,report_viewer,HRDB,True,False
+Q0019,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-23,317.78,analyst1,FinanceDB,True,False
+Q0053,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-20,496.55,developer,SalesDB,False,False
+Q0035,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-28,48.91,developer,HRDB,True,False
+Q0035,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-04,277.72,etl_user,FinanceDB,True,False
+Q0094,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-01,51.8,analyst1,InventoryDB,False,True
+Q0044,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-05,195.82,analyst1,HRDB,True,False
+Q0041,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-26,223.57,admin,InventoryDB,True,False
+Q0090,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-02,204.33,analyst1,InventoryDB,False,True
+Q0058,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-28,7.17,developer,SalesDB,False,False
+Q0062,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-09,211.56,developer,SalesDB,False,False
+Q0069,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-08,306.24,etl_user,HRDB,False,False
+Q0051,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-23,197.76,report_viewer,SalesDB,False,False
+Q0002,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-30,276.36,report_viewer,HRDB,False,False
+Q0033,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-19,156.42,report_viewer,SalesDB,False,False
+Q0120,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-27,134.73,report_viewer,SalesDB,True,False
+Q0156,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-04,114.67,report_viewer,SalesDB,True,False
+Q0108,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-22,180.3,report_viewer,SalesDB,True,False
+Q0002,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-07,206.02,admin,InventoryDB,True,False
+Q0177,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-03,48.02,developer,HRDB,True,False
+Q0068,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-08,136.32,etl_user,HRDB,False,False
+Q0189,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-27,183.94,etl_user,SalesDB,True,False
+Q0163,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-03,71.22,developer,SalesDB,False,False
+Q0071,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-06,125.95,report_viewer,HRDB,False,False
+Q0095,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-02,54.39,analyst1,FinanceDB,False,True
+Q0035,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-14,371.9,etl_user,FinanceDB,True,False
+Q0152,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-26,437.07,admin,FinanceDB,True,False
+Q0070,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-17,266.08,etl_user,FinanceDB,True,False
+Q0175,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-10,109.69,developer,HRDB,True,False
+Q0045,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-10,59.03,etl_user,FinanceDB,False,False
+Q0191,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-24,235.67,report_viewer,HRDB,True,False
+Q0001,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-25,38.45,developer,SalesDB,False,False
+Q0036,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-03,442.06,admin,SalesDB,False,False
+Q0154,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-04,95.41,developer,FinanceDB,True,False
+Q0188,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-14,209.44,developer,FinanceDB,False,False
+Q0184,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-26,114.08,analyst1,InventoryDB,True,False
+Q0076,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-30,326.67,etl_user,SalesDB,False,True
+Q0087,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-02,258.72,developer,FinanceDB,True,False
+Q0098,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-11,312.89,admin,HRDB,True,False
+Q0054,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-02,82.08,developer,InventoryDB,False,False
+Q0133,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-03,225.15,analyst1,SalesDB,True,False
+Q0172,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-15,108.91,etl_user,HRDB,True,False
+Q0105,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-26,319.18,developer,InventoryDB,True,False
+Q0145,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-13,194.35,analyst1,InventoryDB,True,False
+Q0199,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-30,57.78,report_viewer,SalesDB,False,True
+Q0149,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-14,106.78,developer,SalesDB,True,False
+Q0033,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-14,314.53,admin,SalesDB,False,True
+Q0118,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-23,299.08,developer,InventoryDB,True,False
+Q0191,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-18,194.49,report_viewer,InventoryDB,True,False
+Q0039,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-04,517.29,admin,InventoryDB,False,False
+Q0120,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-22,190.77,developer,InventoryDB,False,True
+Q0120,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-01,337.43,developer,InventoryDB,True,False
+Q0069,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-09,347.78,admin,HRDB,True,False
+Q0018,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-06,65.41,analyst1,FinanceDB,True,False
+Q0185,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-06,45.32,developer,HRDB,True,False
+Q0094,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-29,33.81,admin,SalesDB,True,False
+Q0110,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-20,164.9,analyst1,InventoryDB,True,False
+Q0048,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-10,400.93,analyst1,HRDB,True,False
+Q0091,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-12,81.65,developer,InventoryDB,True,False
+Q0077,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-19,101.01,admin,SalesDB,False,False
+Q0108,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-07,11.08,admin,InventoryDB,True,False
+Q0057,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-01,187.52,admin,InventoryDB,True,False
+Q0094,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-08,65.81,report_viewer,HRDB,True,False
+Q0146,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-18,275.35,etl_user,SalesDB,False,False
+Q0026,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-12,265.54,etl_user,SalesDB,True,False
+Q0131,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-14,69.1,etl_user,InventoryDB,False,True
+Q0172,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-25,124.18,developer,InventoryDB,True,False
+Q0029,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-26,144.01,etl_user,FinanceDB,True,False
+Q0093,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-01,160.06,developer,FinanceDB,False,True
+Q0176,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-01,78.6,admin,InventoryDB,False,True
+Q0142,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-12,384.03,analyst1,FinanceDB,False,True
+Q0169,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-20,303.41,report_viewer,HRDB,False,False
+Q0138,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-22,172.76,analyst1,FinanceDB,True,False
+Q0097,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-24,111.49,developer,SalesDB,True,False
+Q0020,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-28,333.97,report_viewer,HRDB,True,False
+Q0004,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-23,256.99,etl_user,FinanceDB,True,False
+Q0077,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-25,76.28,admin,SalesDB,False,False
+Q0100,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-03,201.32,analyst1,SalesDB,True,False
+Q0109,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-15,138.02,developer,SalesDB,False,True
+Q0187,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-01,137.48,etl_user,HRDB,False,False
+Q0059,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-16,232.73,report_viewer,InventoryDB,True,False
+Q0089,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-06,178.35,developer,InventoryDB,True,False
+Q0090,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-18,306.33,developer,InventoryDB,True,False
+Q0024,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-16,43.04,report_viewer,SalesDB,True,False
+Q0197,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-20,640.75,report_viewer,InventoryDB,True,False
+Q0007,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-05,46.29,analyst1,InventoryDB,False,False
+Q0165,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-21,235.53,report_viewer,HRDB,True,False
+Q0089,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-29,36.12,analyst1,HRDB,True,False
+Q0087,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-10,89.39,analyst1,FinanceDB,True,False
+Q0149,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-25,184.56,analyst1,SalesDB,True,False
+Q0101,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-16,54.5,etl_user,FinanceDB,True,False
+Q0020,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-20,300.26,admin,InventoryDB,True,False
+Q0001,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-20,251.99,analyst1,HRDB,True,False
+Q0187,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-09,32.98,analyst1,InventoryDB,True,False
+Q0176,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-27,489.56,developer,InventoryDB,True,False
+Q0195,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-02,189.93,etl_user,SalesDB,True,False
+Q0144,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-18,326.71,analyst1,InventoryDB,True,False
+Q0083,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-21,28.36,developer,InventoryDB,True,False
+Q0086,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-16,455.37,etl_user,FinanceDB,True,False
+Q0136,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-08,160.38,report_viewer,HRDB,True,False
+Q0082,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-10,216.67,report_viewer,HRDB,False,False
+Q0050,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-20,206.7,admin,FinanceDB,True,False
+Q0038,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-11,56.71,admin,InventoryDB,True,False
+Q0096,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-03,65.9,etl_user,SalesDB,True,False
+Q0144,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-16,81.67,analyst1,HRDB,True,False
+Q0055,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-31,579.3,etl_user,SalesDB,True,False
+Q0157,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-27,70.33,report_viewer,SalesDB,True,False
+Q0060,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-22,93.73,developer,FinanceDB,True,False
+Q0062,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-02,175.55,admin,FinanceDB,True,False
+Q0172,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-17,556.27,etl_user,SalesDB,True,False
+Q0070,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-05,109.83,etl_user,FinanceDB,True,False
+Q0118,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-31,338.89,report_viewer,HRDB,True,False
+Q0055,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-17,193.97,report_viewer,InventoryDB,True,False
+Q0072,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-19,499.42,analyst1,InventoryDB,True,False
+Q0143,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-15,457.74,etl_user,HRDB,True,False
+Q0188,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-06,220.95,report_viewer,SalesDB,True,False
+Q0146,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-01,93.73,report_viewer,SalesDB,True,False
+Q0162,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-11,173.96,admin,SalesDB,True,False
+Q0030,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-15,118.97,analyst1,InventoryDB,True,False
+Q0191,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-14,77.01,admin,SalesDB,False,True
+Q0033,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-25,225.98,etl_user,FinanceDB,True,False
+Q0191,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-16,97.2,etl_user,SalesDB,True,False
+Q0198,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-28,197.24,developer,FinanceDB,True,False
+Q0163,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-12,69.39,etl_user,SalesDB,False,True
+Q0077,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-30,262.71,developer,InventoryDB,True,False
+Q0082,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-31,136.63,admin,HRDB,True,False
+Q0122,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-26,172.35,analyst1,FinanceDB,True,False
+Q0153,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-02,150.42,etl_user,FinanceDB,True,False
+Q0146,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-15,490.76,report_viewer,InventoryDB,True,False
+Q0084,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-01,70.55,etl_user,FinanceDB,True,False
+Q0171,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-16,52.28,admin,FinanceDB,True,False
+Q0089,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-10,174.73,developer,FinanceDB,True,False
+Q0044,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-01,357.15,report_viewer,FinanceDB,True,False
+Q0049,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-08,212.23,report_viewer,SalesDB,True,False
+Q0038,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-29,249.83,report_viewer,InventoryDB,True,False
+Q0012,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-14,321.35,analyst1,HRDB,True,False
+Q0134,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-12,97.78,admin,InventoryDB,False,False
+Q0093,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-28,127.68,admin,HRDB,True,False
+Q0196,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-11,60.92,report_viewer,SalesDB,False,False
+Q0143,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-22,36.72,admin,InventoryDB,False,False
+Q0110,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-06,156.46,admin,SalesDB,True,False
+Q0039,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-07,122.65,admin,HRDB,True,False
+Q0004,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-13,86.06,admin,InventoryDB,True,False
+Q0151,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-21,254.38,report_viewer,HRDB,True,False
+Q0183,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-17,47.68,analyst1,HRDB,True,False
+Q0025,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-04,107.36,report_viewer,FinanceDB,True,False
+Q0075,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-25,157.76,admin,HRDB,True,False
+Q0082,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-15,116.65,etl_user,InventoryDB,False,True
+Q0054,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-02,369.45,etl_user,SalesDB,False,False
+Q0019,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-23,330.53,etl_user,FinanceDB,True,False
+Q0156,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-05,216.71,analyst1,SalesDB,False,False
+Q0011,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-05,111.55,analyst1,SalesDB,True,False
+Q0142,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-17,40.38,developer,HRDB,True,False
+Q0187,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-16,267.0,admin,HRDB,True,False
+Q0164,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-04,345.72,etl_user,FinanceDB,True,False
+Q0058,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-21,104.27,etl_user,FinanceDB,False,False
+Q0135,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-30,67.25,developer,HRDB,True,False
+Q0171,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-19,118.59,etl_user,HRDB,True,False
+Q0097,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-01,126.14,etl_user,InventoryDB,True,False
+Q0141,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-26,366.65,etl_user,SalesDB,True,False
+Q0171,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-12,180.81,report_viewer,HRDB,True,False
+Q0024,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-29,190.05,analyst1,FinanceDB,True,False
+Q0175,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-16,267.36,etl_user,FinanceDB,True,False
+Q0125,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-09,284.64,report_viewer,FinanceDB,True,False
+Q0157,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-02,492.16,report_viewer,InventoryDB,False,False
+Q0042,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-21,280.41,analyst1,InventoryDB,False,True
+Q0099,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-16,131.82,developer,SalesDB,True,False
+Q0057,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-22,291.2,developer,FinanceDB,True,False
+Q0135,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-05,26.48,admin,FinanceDB,True,False
+Q0018,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-26,146.06,developer,HRDB,True,False
+Q0192,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-07,142.72,report_viewer,SalesDB,True,False
+Q0188,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-10,72.61,admin,HRDB,False,True
+Q0111,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-29,345.11,etl_user,FinanceDB,True,False
+Q0062,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-22,107.23,developer,HRDB,False,True
+Q0167,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-18,176.69,admin,SalesDB,True,False
+Q0084,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-20,142.47,report_viewer,SalesDB,True,False
+Q0133,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-18,211.67,analyst1,InventoryDB,False,False
+Q0136,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-17,137.32,etl_user,InventoryDB,True,False
+Q0013,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-15,269.12,developer,HRDB,False,False
+Q0141,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-12,214.9,admin,HRDB,True,False
+Q0065,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-05,115.65,etl_user,SalesDB,True,False
+Q0073,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-18,99.25,analyst1,SalesDB,True,False
+Q0064,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-13,85.48,admin,HRDB,True,False
+Q0096,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-08,284.61,analyst1,InventoryDB,True,False
+Q0071,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-11,312.91,report_viewer,SalesDB,True,False
+Q0061,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-04,212.66,admin,FinanceDB,False,True
+Q0036,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-01,142.33,etl_user,SalesDB,False,True
+Q0133,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-18,187.54,admin,FinanceDB,True,False
+Q0060,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-16,39.31,etl_user,InventoryDB,False,False
+Q0068,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-01,398.02,developer,SalesDB,True,False
+Q0145,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-10,634.94,report_viewer,SalesDB,False,True
+Q0182,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-06,122.3,admin,HRDB,True,False
+Q0124,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-23,152.13,etl_user,InventoryDB,True,False
+Q0009,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-29,522.12,developer,SalesDB,False,False
+Q0135,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-18,411.38,report_viewer,FinanceDB,True,False
+Q0020,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-21,268.49,report_viewer,FinanceDB,True,False
+Q0142,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-11,350.95,analyst1,InventoryDB,True,False
+Q0038,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-12,506.62,report_viewer,HRDB,True,False
+Q0172,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-08,342.22,developer,InventoryDB,True,False
+Q0170,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-30,97.8,developer,HRDB,True,False
+Q0075,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-19,161.67,analyst1,FinanceDB,True,False
+Q0073,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-30,60.83,developer,SalesDB,True,False
+Q0005,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-14,283.98,analyst1,InventoryDB,False,False
+Q0010,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-06,473.59,etl_user,InventoryDB,True,False
+Q0029,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-02,275.36,analyst1,FinanceDB,True,False
+Q0004,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-13,436.19,etl_user,FinanceDB,True,False
+Q0061,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-20,36.95,etl_user,SalesDB,True,False
+Q0081,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-03,16.13,admin,InventoryDB,True,False
+Q0174,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-24,92.59,developer,SalesDB,True,False
+Q0146,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-01,368.59,developer,SalesDB,False,False
+Q0113,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-04,325.43,developer,InventoryDB,False,False
+Q0154,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-26,320.32,developer,HRDB,True,False
+Q0199,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-12,163.48,analyst1,HRDB,False,False
+Q0185,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-24,63.52,admin,InventoryDB,True,False
+Q0045,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-22,88.24,developer,HRDB,True,False
+Q0112,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-19,153.68,developer,HRDB,True,False
+Q0032,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-17,244.23,analyst1,InventoryDB,True,False
+Q0030,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-29,76.65,etl_user,SalesDB,True,False
+Q0072,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-25,70.71,developer,HRDB,False,True
+Q0194,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-18,304.11,analyst1,SalesDB,True,False
+Q0147,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-29,36.95,report_viewer,HRDB,True,False
+Q0027,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-10,234.67,analyst1,FinanceDB,False,False
+Q0145,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-22,584.64,report_viewer,SalesDB,True,False
+Q0046,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-18,119.71,report_viewer,InventoryDB,True,False
+Q0180,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-21,74.82,report_viewer,FinanceDB,True,False
+Q0184,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-03,263.73,developer,InventoryDB,True,False
+Q0173,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-29,40.67,admin,SalesDB,False,False
+Q0175,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-08,242.83,report_viewer,InventoryDB,True,False
+Q0101,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-05,91.0,developer,FinanceDB,False,False
+Q0169,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-04,20.67,etl_user,SalesDB,True,False
+Q0040,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-27,152.03,etl_user,HRDB,True,False
+Q0054,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-01,238.74,etl_user,InventoryDB,True,False
+Q0137,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-10,121.64,etl_user,HRDB,True,False
+Q0036,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-08,499.77,analyst1,SalesDB,False,True
+Q0014,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-12,304.26,analyst1,SalesDB,True,False
+Q0100,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-23,634.29,analyst1,HRDB,False,False
+Q0032,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-25,65.67,developer,FinanceDB,True,False
+Q0199,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-29,161.21,analyst1,SalesDB,True,False
+Q0127,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-26,500.45,analyst1,InventoryDB,True,False
+Q0009,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-06,190.83,admin,HRDB,True,False
+Q0029,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-16,110.48,developer,HRDB,True,False
+Q0004,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-08,40.81,etl_user,HRDB,True,False
+Q0123,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-15,126.3,analyst1,InventoryDB,True,False
+Q0049,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-12,83.26,developer,InventoryDB,False,False
+Q0113,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-29,154.62,report_viewer,SalesDB,True,False
+Q0089,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-14,170.2,etl_user,InventoryDB,True,False
+Q0169,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-06,294.38,admin,FinanceDB,True,False
+Q0152,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-18,307.03,etl_user,FinanceDB,False,False
+Q0138,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-05,138.85,admin,SalesDB,True,False
+Q0149,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-12,259.31,developer,FinanceDB,True,False
+Q0129,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-16,78.22,etl_user,InventoryDB,True,False
+Q0001,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-11,253.73,etl_user,HRDB,False,False
+Q0160,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-08,318.42,etl_user,FinanceDB,True,False
+Q0066,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-12,65.24,analyst1,SalesDB,True,False
+Q0053,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-01,30.73,admin,SalesDB,True,False
+Q0103,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-07,319.06,developer,HRDB,True,False
+Q0156,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-21,219.28,developer,HRDB,True,False
+Q0088,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-20,117.74,etl_user,HRDB,True,False
+Q0171,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-08,162.45,analyst1,FinanceDB,True,False
+Q0130,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-26,93.31,analyst1,HRDB,False,False
+Q0046,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-28,54.56,developer,FinanceDB,True,False
+Q0080,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-10,41.31,admin,SalesDB,True,False
+Q0026,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-21,211.44,analyst1,FinanceDB,True,False
+Q0184,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-28,167.0,report_viewer,InventoryDB,True,False
+Q0043,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-22,361.32,analyst1,FinanceDB,True,False
+Q0082,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-12,128.29,developer,InventoryDB,False,False
+Q0019,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-01,721.64,admin,FinanceDB,True,False
+Q0197,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-03,114.0,report_viewer,InventoryDB,True,False
+Q0164,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-26,51.26,analyst1,HRDB,True,False
+Q0115,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-24,19.16,etl_user,SalesDB,True,False
+Q0013,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-04,129.64,developer,FinanceDB,True,False
+Q0022,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-31,206.92,analyst1,HRDB,False,False
+Q0193,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-27,423.57,report_viewer,HRDB,True,False
+Q0118,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-09,404.62,developer,FinanceDB,True,False
+Q0159,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-16,76.77,developer,SalesDB,False,False
+Q0153,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-14,309.6,developer,InventoryDB,True,False
+Q0085,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-05,194.49,report_viewer,FinanceDB,False,False
+Q0069,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-27,211.06,etl_user,InventoryDB,True,False
+Q0011,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-21,37.85,etl_user,SalesDB,True,False
+Q0141,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-05,188.48,developer,FinanceDB,False,False
+Q0103,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-20,124.54,developer,HRDB,True,False
+Q0062,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-01,126.0,etl_user,FinanceDB,True,False
+Q0088,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-12,367.91,etl_user,FinanceDB,True,False
+Q0116,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-20,186.87,developer,HRDB,True,False
+Q0098,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-06,280.97,report_viewer,FinanceDB,False,True
+Q0167,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-11,464.85,analyst1,SalesDB,True,False
+Q0120,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-13,222.86,developer,InventoryDB,True,False
+Q0008,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-14,179.52,analyst1,SalesDB,True,False
+Q0154,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-14,228.47,developer,FinanceDB,True,False
+Q0112,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-28,109.24,report_viewer,SalesDB,True,False
+Q0144,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-31,193.79,developer,HRDB,False,False
+Q0095,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-05,188.67,etl_user,FinanceDB,True,False
+Q0028,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-10,299.42,analyst1,InventoryDB,True,False
+Q0189,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-20,154.25,etl_user,HRDB,True,False
+Q0067,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-12,64.01,report_viewer,InventoryDB,True,False
+Q0038,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-06,343.83,report_viewer,HRDB,True,False
+Q0136,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-29,428.79,developer,InventoryDB,True,False
+Q0089,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-26,148.83,report_viewer,InventoryDB,True,False
+Q0002,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-15,110.39,analyst1,FinanceDB,True,False
+Q0034,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-19,237.11,admin,SalesDB,True,False
+Q0122,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-08,29.67,developer,FinanceDB,False,False
+Q0022,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-02,274.13,admin,InventoryDB,True,False
+Q0156,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-12,315.63,etl_user,InventoryDB,True,False
+Q0183,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-03,120.59,admin,FinanceDB,True,False
+Q0190,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-13,194.29,developer,HRDB,True,False
+Q0159,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-07,420.48,admin,FinanceDB,True,False
+Q0099,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-22,239.81,developer,InventoryDB,True,False
+Q0011,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-12,138.21,report_viewer,HRDB,True,False
+Q0128,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-10,13.02,developer,SalesDB,True,False
+Q0112,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-29,239.35,etl_user,InventoryDB,True,False
+Q0080,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-12,50.34,developer,HRDB,True,False
+Q0197,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-13,84.65,etl_user,InventoryDB,False,True
+Q0180,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-05,34.9,analyst1,InventoryDB,True,False
+Q0136,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-21,136.09,admin,FinanceDB,True,False
+Q0156,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-17,33.5,report_viewer,InventoryDB,True,False
+Q0145,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-22,253.05,report_viewer,HRDB,True,False
+Q0089,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-20,103.09,developer,SalesDB,True,False
+Q0192,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-17,50.9,analyst1,SalesDB,False,True
+Q0146,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-10,163.7,analyst1,FinanceDB,False,True
+Q0122,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-16,38.42,developer,FinanceDB,True,False
+Q0199,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-19,400.41,report_viewer,HRDB,True,False
+Q0173,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-03,320.33,analyst1,FinanceDB,False,False
+Q0030,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-21,39.68,report_viewer,InventoryDB,True,False
+Q0170,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-04,159.49,developer,SalesDB,True,False
+Q0041,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-10,59.03,analyst1,InventoryDB,True,False
+Q0142,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-24,56.57,report_viewer,InventoryDB,False,False
+Q0125,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-06,266.34,report_viewer,InventoryDB,True,False
+Q0175,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-12,483.64,report_viewer,InventoryDB,False,False
+Q0026,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-09,128.86,developer,SalesDB,True,False
+Q0094,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-17,195.3,developer,HRDB,True,False
+Q0167,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-14,230.23,developer,FinanceDB,True,False
+Q0190,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-02,20.77,developer,SalesDB,True,False
+Q0146,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-19,125.36,report_viewer,InventoryDB,False,False
+Q0126,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-20,116.8,analyst1,HRDB,True,False
+Q0158,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-29,158.95,etl_user,FinanceDB,True,False
+Q0149,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-26,218.5,etl_user,SalesDB,True,False
+Q0161,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-05,162.28,etl_user,FinanceDB,True,False
+Q0149,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-06,534.01,admin,InventoryDB,True,False
+Q0119,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-27,281.42,developer,HRDB,False,True
+Q0172,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-18,69.31,analyst1,FinanceDB,True,False
+Q0068,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-12,262.97,etl_user,FinanceDB,True,False
+Q0194,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-29,288.78,developer,InventoryDB,False,False
+Q0157,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-18,5.12,admin,FinanceDB,False,True
+Q0081,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-29,218.37,admin,HRDB,True,False
+Q0109,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-10,73.6,report_viewer,InventoryDB,True,False
+Q0148,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-09,230.69,analyst1,FinanceDB,False,True
+Q0138,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-03,310.26,admin,SalesDB,True,False
+Q0124,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-14,6.66,analyst1,HRDB,False,False
+Q0097,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-13,368.59,etl_user,SalesDB,True,False
+Q0156,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-17,581.39,analyst1,HRDB,True,False
+Q0166,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-10,131.37,developer,SalesDB,False,True
+Q0153,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-15,244.55,admin,InventoryDB,True,False
+Q0125,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-25,57.91,report_viewer,SalesDB,True,False
+Q0149,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-20,218.54,report_viewer,FinanceDB,True,False
+Q0089,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-07,137.89,admin,FinanceDB,True,False
+Q0191,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-29,288.26,report_viewer,FinanceDB,True,False
+Q0119,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-21,47.69,developer,SalesDB,False,True
+Q0079,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-17,212.52,admin,FinanceDB,True,False
+Q0110,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-29,89.98,etl_user,FinanceDB,True,False
+Q0105,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-26,91.68,admin,SalesDB,True,False
+Q0176,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-12,331.78,admin,InventoryDB,True,False
+Q0160,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-15,32.69,developer,HRDB,False,True
+Q0082,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-28,113.3,analyst1,HRDB,True,False
+Q0141,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-26,19.51,report_viewer,FinanceDB,False,False
+Q0057,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-23,239.45,developer,HRDB,True,False
+Q0003,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-11,156.16,report_viewer,HRDB,True,False
+Q0200,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-26,152.7,etl_user,SalesDB,False,True
+Q0072,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-06,175.48,report_viewer,InventoryDB,True,False
+Q0133,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-11,140.52,report_viewer,FinanceDB,True,False
+Q0103,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-10,290.82,analyst1,HRDB,True,False
+Q0195,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-22,126.41,admin,HRDB,True,False
+Q0035,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-15,798.86,admin,SalesDB,True,False
+Q0076,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-24,51.25,etl_user,InventoryDB,True,False
+Q0164,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-04,136.53,report_viewer,InventoryDB,True,False
+Q0066,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-20,291.53,developer,SalesDB,True,False
+Q0191,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-04,18.04,analyst1,HRDB,True,False
+Q0060,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-12,312.68,analyst1,SalesDB,False,False
+Q0030,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-02,273.14,developer,SalesDB,False,True
+Q0150,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-06,200.78,analyst1,SalesDB,True,False
+Q0105,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-30,38.45,etl_user,SalesDB,True,False
+Q0180,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-30,162.76,etl_user,SalesDB,True,False
+Q0198,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-10,446.2,analyst1,InventoryDB,False,True
+Q0081,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-03-07,58.86,report_viewer,FinanceDB,True,False
+Q0049,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-09,210.52,etl_user,InventoryDB,False,True
+Q0174,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-14,198.42,analyst1,HRDB,False,False
+Q0059,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-16,300.48,admin,HRDB,True,False
+Q0143,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-05,47.05,developer,HRDB,True,False
+Q0104,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-22,137.82,developer,FinanceDB,True,False
+Q0127,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-03,262.76,etl_user,HRDB,True,False
+Q0078,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-15,114.96,etl_user,InventoryDB,False,False
+Q0128,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-10,186.35,analyst1,SalesDB,True,False
+Q0109,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-29,97.23,analyst1,FinanceDB,True,False
+Q0155,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-14,68.14,admin,FinanceDB,False,False
+Q0118,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-18,74.41,analyst1,InventoryDB,True,False
+Q0073,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-07,174.83,admin,FinanceDB,False,True
+Q0115,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-13,149.92,etl_user,FinanceDB,True,False
+Q0135,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-10,100.55,etl_user,HRDB,False,False
+Q0163,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-27,258.59,analyst1,InventoryDB,True,False
+Q0081,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-21,118.4,analyst1,FinanceDB,False,False
+Q0085,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-03,123.12,analyst1,InventoryDB,True,False
+Q0200,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-30,169.56,admin,HRDB,True,False
+Q0053,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-01,112.82,report_viewer,InventoryDB,True,False
+Q0019,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-05,287.74,analyst1,HRDB,False,False
+Q0097,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-16,64.1,analyst1,HRDB,False,False
+Q0061,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-28,220.61,report_viewer,InventoryDB,True,False
+Q0062,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-25,646.57,developer,SalesDB,False,False
+Q0057,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-01,172.99,report_viewer,FinanceDB,False,False
+Q0080,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-19,669.64,developer,SalesDB,True,False
+Q0116,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-18,56.77,admin,SalesDB,False,False
+Q0188,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-28,82.05,analyst1,InventoryDB,True,False
+Q0083,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-09,454.3,analyst1,HRDB,True,False
+Q0153,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-13,95.39,etl_user,SalesDB,True,False
+Q0174,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-12,172.81,analyst1,InventoryDB,True,False
+Q0167,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-04,169.48,etl_user,InventoryDB,False,False
+Q0102,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-04,78.97,developer,HRDB,True,False
+Q0198,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-25,143.26,admin,InventoryDB,False,True
+Q0134,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-22,109.92,report_viewer,HRDB,True,False
+Q0198,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-15,164.56,etl_user,HRDB,True,False
+Q0131,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-08,396.54,report_viewer,FinanceDB,True,False
+Q0033,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-05,483.54,analyst1,SalesDB,True,False
+Q0191,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-24,295.07,analyst1,FinanceDB,True,False
+Q0192,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-01,58.39,admin,HRDB,True,False
+Q0003,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-14,113.96,admin,InventoryDB,True,False
+Q0011,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-11,632.46,admin,FinanceDB,False,True
+Q0097,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-22,68.54,report_viewer,SalesDB,False,False
+Q0106,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-01,321.26,report_viewer,HRDB,True,False
+Q0144,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-03,574.09,etl_user,InventoryDB,False,True
+Q0070,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-08,145.54,etl_user,InventoryDB,False,False
+Q0200,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-18,226.81,etl_user,HRDB,False,False
+Q0160,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-21,109.51,etl_user,FinanceDB,True,False
+Q0069,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-29,70.58,report_viewer,HRDB,True,False
+Q0129,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-07,104.26,report_viewer,FinanceDB,True,False
+Q0028,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-10,91.39,developer,FinanceDB,False,False
+Q0051,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-13,447.33,analyst1,FinanceDB,True,False
+Q0188,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-13,83.01,developer,SalesDB,True,False
+Q0123,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-10,201.58,admin,FinanceDB,False,False
+Q0188,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-27,31.06,analyst1,FinanceDB,True,False
+Q0152,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-08,263.58,admin,InventoryDB,False,False
+Q0069,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-26,91.82,developer,HRDB,True,False
+Q0177,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-23,38.34,analyst1,InventoryDB,True,False
+Q0143,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-30,870.28,etl_user,SalesDB,True,False
+Q0071,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-05,257.94,etl_user,HRDB,False,True
+Q0070,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-12,26.27,etl_user,SalesDB,True,False
+Q0060,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-16,118.17,developer,SalesDB,True,False
+Q0114,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-27,190.57,analyst1,HRDB,True,False
+Q0115,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-08,206.07,admin,FinanceDB,True,False
+Q0069,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-25,205.26,analyst1,HRDB,False,True
+Q0180,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-17,25.55,admin,FinanceDB,True,False
+Q0073,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-12,138.48,analyst1,InventoryDB,True,False
+Q0187,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-26,261.92,admin,SalesDB,True,False
+Q0043,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-12,45.2,admin,InventoryDB,True,False
+Q0139,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-31,474.19,report_viewer,HRDB,True,False
+Q0167,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-10,152.02,etl_user,SalesDB,False,False
+Q0162,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-26,189.55,etl_user,InventoryDB,False,False
+Q0183,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-05,102.5,developer,InventoryDB,False,False
+Q0064,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-06,131.23,developer,FinanceDB,True,False
+Q0145,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-08,48.2,admin,FinanceDB,True,False
+Q0001,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-25,124.66,developer,InventoryDB,True,False
+Q0198,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-03,83.13,admin,SalesDB,True,False
+Q0173,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-13,93.79,admin,FinanceDB,False,False
+Q0047,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-14,389.13,analyst1,InventoryDB,True,False
+Q0108,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-21,55.5,analyst1,HRDB,False,True
+Q0072,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-22,157.64,analyst1,FinanceDB,True,False
+Q0011,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-25,44.8,analyst1,SalesDB,False,False
+Q0183,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-31,75.93,etl_user,InventoryDB,True,False
+Q0090,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-14,98.14,report_viewer,HRDB,True,False
+Q0006,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-24,314.19,developer,FinanceDB,True,False
+Q0052,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-09,173.54,developer,HRDB,False,True
+Q0169,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-03,101.62,admin,FinanceDB,True,False
+Q0016,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-11,224.05,analyst1,InventoryDB,True,False
+Q0155,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-03,232.73,admin,HRDB,True,False
+Q0096,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-02,236.78,analyst1,HRDB,True,False
+Q0012,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-24,85.71,analyst1,HRDB,True,False
+Q0174,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-16,392.52,etl_user,FinanceDB,True,False
+Q0082,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-24,177.44,etl_user,HRDB,True,False
+Q0046,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-20,31.68,etl_user,SalesDB,True,False
+Q0087,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-29,167.42,developer,HRDB,True,False
+Q0177,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-30,352.83,developer,InventoryDB,True,False
+Q0063,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-29,256.0,etl_user,SalesDB,True,False
+Q0015,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-11,38.57,developer,InventoryDB,False,False
+Q0013,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-26,128.95,developer,FinanceDB,True,False
+Q0033,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-14,188.05,report_viewer,SalesDB,True,False
+Q0115,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-23,84.77,etl_user,FinanceDB,False,False
+Q0099,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-21,95.78,report_viewer,InventoryDB,False,True
+Q0098,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-14,356.66,admin,FinanceDB,True,False
+Q0007,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-22,330.96,analyst1,SalesDB,True,False
+Q0048,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-27,52.02,analyst1,HRDB,False,False
+Q0173,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-02-08,55.38,report_viewer,HRDB,True,False
+Q0031,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-21,290.17,report_viewer,SalesDB,True,False
+Q0131,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-24,135.28,report_viewer,SalesDB,True,False
+Q0175,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-25,349.19,analyst1,FinanceDB,True,False
+Q0108,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-09,211.68,analyst1,SalesDB,False,False
+Q0133,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-29,109.87,analyst1,InventoryDB,False,True
+Q0186,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-21,117.95,etl_user,SalesDB,True,False
+Q0071,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-31,677.87,analyst1,InventoryDB,True,False
+Q0160,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-30,219.59,developer,HRDB,False,False
+Q0091,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-14,456.16,report_viewer,FinanceDB,False,True
+Q0113,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-31,158.05,admin,FinanceDB,True,False
+Q0044,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-11,635.77,analyst1,FinanceDB,True,False
+Q0091,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-10,68.09,analyst1,InventoryDB,False,False
+Q0109,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-06,102.28,analyst1,InventoryDB,False,False
+Q0078,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-07,202.27,developer,FinanceDB,True,False
+Q0023,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-13,176.36,admin,InventoryDB,True,False
+Q0076,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-27,113.87,admin,SalesDB,True,False
+Q0067,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-09,367.79,report_viewer,SalesDB,False,False
+Q0041,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-16,215.71,analyst1,SalesDB,True,False
+Q0111,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-20,381.34,admin,FinanceDB,True,False
+Q0006,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-17,203.17,admin,SalesDB,True,False
+Q0099,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-23,44.61,report_viewer,InventoryDB,False,False
+Q0124,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-04,228.42,developer,InventoryDB,False,False
+Q0114,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-11,138.77,report_viewer,InventoryDB,True,False
+Q0115,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-12,169.4,analyst1,SalesDB,True,False
+Q0122,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-29,163.37,analyst1,InventoryDB,False,False
+Q0053,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-20,264.54,analyst1,HRDB,True,False
+Q0077,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-17,331.17,analyst1,SalesDB,False,False
+Q0058,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-10,176.11,etl_user,FinanceDB,True,False
+Q0055,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-04,401.14,developer,HRDB,True,False
+Q0057,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-12,81.9,analyst1,SalesDB,True,False
+Q0128,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-13,70.88,developer,HRDB,True,False
+Q0111,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-25,242.48,etl_user,SalesDB,True,False
+Q0197,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-28,24.46,analyst1,FinanceDB,True,False
+Q0164,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-24,41.28,report_viewer,FinanceDB,True,False
+Q0014,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-06,319.49,report_viewer,SalesDB,True,False
+Q0142,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-03-17,186.23,etl_user,SalesDB,False,False
+Q0069,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-24,93.4,analyst1,InventoryDB,True,False
+Q0118,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-30,131.7,analyst1,HRDB,True,False
+Q0002,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-23,188.26,developer,InventoryDB,False,False
+Q0021,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-10,341.2,developer,FinanceDB,True,False
+Q0151,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-17,13.92,etl_user,InventoryDB,True,False
+Q0036,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-10,139.74,report_viewer,InventoryDB,False,False
+Q0122,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-20,98.35,developer,InventoryDB,False,True
+Q0057,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-17,196.62,etl_user,SalesDB,True,False
+Q0072,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-03,159.75,etl_user,HRDB,True,False
+Q0197,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-13,202.82,etl_user,InventoryDB,True,False
+Q0144,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-03,199.18,analyst1,SalesDB,True,False
+Q0189,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-13,300.91,report_viewer,HRDB,True,False
+Q0102,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-07,64.71,etl_user,SalesDB,True,False
+Q0035,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-11,69.17,analyst1,SalesDB,True,False
+Q0187,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-24,571.41,developer,FinanceDB,True,False
+Q0168,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-02,291.28,developer,HRDB,True,False
+Q0179,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-15,189.27,etl_user,InventoryDB,False,False
+Q0096,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-14,646.36,report_viewer,HRDB,True,False
+Q0175,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-05,124.1,developer,InventoryDB,True,False
+Q0102,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-20,221.72,analyst1,InventoryDB,True,False
+Q0111,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-11,88.2,developer,InventoryDB,True,False
+Q0139,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-01,85.63,admin,SalesDB,True,False
+Q0154,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-24,240.01,report_viewer,SalesDB,True,False
+Q0110,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-03,212.84,admin,FinanceDB,True,False
+Q0117,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-31,174.62,etl_user,FinanceDB,False,False
+Q0018,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-06,169.86,developer,SalesDB,True,False
+Q0033,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-05,549.75,admin,HRDB,True,False
+Q0097,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-01,16.08,etl_user,SalesDB,False,False
+Q0128,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-07,527.51,admin,HRDB,True,False
+Q0125,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-23,75.3,analyst1,SalesDB,True,False
+Q0062,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-10,237.02,report_viewer,HRDB,False,False
+Q0179,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-03,77.05,developer,InventoryDB,False,False
+Q0057,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-14,128.73,admin,SalesDB,False,False
+Q0142,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-17,120.49,admin,InventoryDB,False,False
+Q0077,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-06,47.7,admin,FinanceDB,True,False
+Q0108,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-04,100.27,report_viewer,SalesDB,True,False
+Q0142,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-16,362.39,developer,SalesDB,True,False
+Q0082,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-07,57.73,etl_user,InventoryDB,True,False
+Q0098,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-05,190.15,admin,InventoryDB,True,False
+Q0012,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-27,127.66,etl_user,InventoryDB,True,False
+Q0117,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-10,389.28,analyst1,FinanceDB,True,False
+Q0085,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-26,66.2,report_viewer,FinanceDB,False,False
+Q0074,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-16,283.02,etl_user,FinanceDB,True,False
+Q0174,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-28,344.78,admin,FinanceDB,True,False
+Q0116,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-21,92.1,analyst1,FinanceDB,True,False
+Q0188,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-04-16,79.34,report_viewer,SalesDB,True,False
+Q0056,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-28,201.5,developer,HRDB,True,False
+Q0045,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-19,133.26,admin,SalesDB,True,False
+Q0005,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-27,156.32,report_viewer,SalesDB,False,False
+Q0007,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-29,69.6,analyst1,HRDB,True,False
+Q0093,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-24,262.44,report_viewer,FinanceDB,True,False
+Q0045,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-26,237.14,report_viewer,InventoryDB,True,False
+Q0188,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-31,94.54,report_viewer,InventoryDB,True,False
+Q0106,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-02,294.91,admin,InventoryDB,False,False
+Q0138,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-17,138.17,admin,SalesDB,True,False
+Q0011,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-01-11,386.45,etl_user,HRDB,True,False
+Q0069,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-24,321.71,report_viewer,InventoryDB,True,False
+Q0170,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-23,568.72,admin,HRDB,True,False
+Q0150,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-18,236.08,analyst1,SalesDB,True,False
+Q0065,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-11,346.06,analyst1,InventoryDB,True,False
+Q0055,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-11,187.55,report_viewer,InventoryDB,True,False
+Q0126,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-26,192.22,analyst1,SalesDB,True,False
+Q0193,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-02-16,115.2,admin,FinanceDB,True,False
+Q0007,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-19,451.07,developer,FinanceDB,True,False
+Q0125,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-28,146.69,analyst1,FinanceDB,True,False
+Q0157,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-09,185.16,admin,HRDB,True,False
+Q0174,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-28,180.51,admin,HRDB,False,False
+Q0015,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-24,66.27,report_viewer,HRDB,True,False
+Q0057,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-16,202.52,report_viewer,HRDB,True,False
+Q0057,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-01,184.88,etl_user,SalesDB,True,False
+Q0198,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-20,134.91,admin,SalesDB,True,False
+Q0006,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-13,94.32,report_viewer,SalesDB,False,False
+Q0010,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-16,108.26,analyst1,InventoryDB,True,False
+Q0183,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-06-30,168.89,admin,HRDB,True,False
+Q0165,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-30,159.56,report_viewer,InventoryDB,True,False
+Q0144,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-23,113.36,developer,FinanceDB,True,False
+Q0174,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-01-04,294.18,analyst1,HRDB,False,False
+Q0108,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-05-25,74.28,developer,InventoryDB,False,False
+Q0114,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-01-28,193.0,developer,HRDB,True,False
+Q0084,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-22,72.26,analyst1,SalesDB,True,False
+Q0089,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-27,158.49,developer,FinanceDB,True,False
+Q0004,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-03,400.24,report_viewer,HRDB,False,False
+Q0117,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-01,927.14,developer,SalesDB,True,False
+Q0105,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-15,120.79,report_viewer,InventoryDB,True,False
+Q0104,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-29,175.3,analyst1,SalesDB,False,True
+Q0122,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-18,80.67,analyst1,InventoryDB,True,False
+Q0053,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-10,34.9,report_viewer,SalesDB,True,False
+Q0159,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-03-31,28.71,admin,FinanceDB,True,False
+Q0087,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-31,323.24,analyst1,FinanceDB,True,False
+Q0200,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-22,326.54,admin,HRDB,False,True
+Q0183,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-12,517.15,developer,HRDB,False,False
+Q0047,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-06-21,44.82,admin,HRDB,True,False
+Q0156,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-05-07,98.21,report_viewer,FinanceDB,True,False
+Q0153,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-26,567.23,admin,HRDB,True,False
+Q0112,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-03,29.99,admin,HRDB,True,False
+Q0157,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-03,137.06,developer,SalesDB,True,False
+Q0011,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-20,429.66,analyst1,HRDB,True,False
+Q0074,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-05,127.54,report_viewer,HRDB,False,False
+Q0069,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-15,39.36,admin,HRDB,True,False
+Q0192,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-10,165.9,developer,SalesDB,True,False
+Q0130,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-02,136.11,analyst1,SalesDB,False,False
+Q0186,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-10,488.2,etl_user,InventoryDB,True,False
+Q0121,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-02-13,701.61,etl_user,InventoryDB,True,False
+Q0167,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-01,74.41,etl_user,FinanceDB,True,False
+Q0030,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-24,166.05,admin,HRDB,True,False
+Q0005,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-12,155.34,report_viewer,FinanceDB,True,False
+Q0106,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-06-05,94.3,analyst1,InventoryDB,False,False
+Q0138,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-17,231.23,report_viewer,HRDB,True,False
+Q0144,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-14,113.93,admin,SalesDB,True,False
+Q0090,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-16,76.0,admin,InventoryDB,True,False
+Q0125,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-19,64.4,admin,HRDB,False,False
+Q0005,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-01-01,99.74,report_viewer,FinanceDB,False,False
+Q0080,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-20,458.45,etl_user,HRDB,True,False
+Q0093,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-15,297.95,admin,HRDB,True,False
+Q0043,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-01-19,125.39,admin,HRDB,True,False
+Q0041,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-02,22.65,admin,SalesDB,False,True
+Q0056,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-21,68.69,analyst1,HRDB,False,False
+Q0067,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-26,157.88,developer,HRDB,True,False
+Q0091,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-30,281.62,developer,FinanceDB,False,False
+Q0181,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-06,304.95,etl_user,FinanceDB,True,False
+Q0157,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-07,163.55,admin,FinanceDB,True,False
+Q0008,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-30,122.6,admin,SalesDB,False,True
+Q0071,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-12,374.43,developer,SalesDB,True,False
+Q0049,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-05-08,162.85,admin,HRDB,True,False
+Q0071,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-22,244.37,developer,SalesDB,False,True
+Q0137,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-01-27,67.55,report_viewer,SalesDB,False,True
+Q0182,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-02,341.0,etl_user,SalesDB,True,False
+Q0049,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-04-17,23.62,etl_user,InventoryDB,True,False
+Q0084,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-01,189.05,analyst1,HRDB,True,False
+Q0184,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-01-18,67.0,report_viewer,SalesDB,False,True
+Q0118,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-24,358.94,analyst1,InventoryDB,True,False
+Q0103,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-07,21.49,admin,SalesDB,False,True
+Q0018,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-03-18,507.52,report_viewer,HRDB,False,False
+Q0155,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-27,238.37,analyst1,InventoryDB,True,False
+Q0006,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-02,343.32,developer,InventoryDB,True,False
+Q0059,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-01-23,294.38,developer,FinanceDB,True,False
+Q0059,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-18,201.32,etl_user,SalesDB,False,False
+Q0192,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-05-24,113.5,admin,InventoryDB,True,False
+Q0180,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-01,106.31,etl_user,InventoryDB,True,False
+Q0089,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-03-25,136.61,analyst1,HRDB,True,False
+Q0021,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-01,245.09,report_viewer,SalesDB,True,False
+Q0040,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-04-08,63.75,admin,SalesDB,True,False
+Q0121,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-06-08,179.75,admin,InventoryDB,True,False
+Q0100,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-08,37.29,developer,InventoryDB,False,False
+Q0150,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-01-18,65.95,analyst1,FinanceDB,True,False
+Q0014,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-11,104.48,report_viewer,SalesDB,True,False
+Q0160,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-02-03,9.94,analyst1,InventoryDB,True,False
+Q0071,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-02-29,294.99,report_viewer,FinanceDB,True,False
+Q0111,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-03-06,159.63,etl_user,InventoryDB,True,False
+Q0058,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-02-06,181.46,etl_user,FinanceDB,False,False
+Q0043,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-01,125.55,admin,InventoryDB,True,False
+Q0085,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-16,114.8,etl_user,InventoryDB,False,False
+Q0154,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-17,130.85,analyst1,HRDB,True,False
+Q0176,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-03,181.84,developer,InventoryDB,True,False
+Q0058,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-06-28,122.85,admin,InventoryDB,True,False
+Q0073,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-30,89.34,admin,SalesDB,True,False
+Q0105,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-05-19,473.09,developer,HRDB,True,False
+Q0099,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-05-11,285.58,developer,InventoryDB,False,False
+Q0178,"DELETE FROM Logs WHERE event_date < DATEADD(month, -6, GETDATE());",2024-04-03,239.5,admin,SalesDB,True,False
+Q0190,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-05-28,102.74,etl_user,InventoryDB,True,False
+Q0098,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-05-10,249.0,admin,SalesDB,False,False
+Q0112,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-05-18,219.98,developer,HRDB,False,False
+Q0076,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-15,150.03,report_viewer,InventoryDB,False,True
+Q0094,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-28,163.21,admin,SalesDB,False,False
+Q0098,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-04-14,310.1,report_viewer,HRDB,True,False
+Q0030,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-04-19,322.17,report_viewer,FinanceDB,True,False
+Q0032,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-01-25,74.14,etl_user,HRDB,True,False
+Q0067,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-06-11,391.97,admin,SalesDB,True,False
+Q0003,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-27,16.96,admin,SalesDB,True,False
+Q0032,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-03-18,61.63,report_viewer,SalesDB,True,False
+Q0056,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-06-19,252.87,developer,InventoryDB,True,False
+Q0107,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-04-06,125.17,etl_user,FinanceDB,True,False
+Q0043,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-30,258.87,admin,SalesDB,False,True
+Q0088,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-02-19,124.43,developer,HRDB,False,False
+Q0148,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-04-22,390.62,analyst1,SalesDB,True,False
+Q0077,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-02-28,53.14,report_viewer,FinanceDB,False,False
+Q0143,"INSERT INTO Sales (product_id, quantity, sale_date) VALUES (?, ?, ?);",2024-06-01,147.04,admin,SalesDB,True,False
+Q0163,"SELECT Orders.order_id, Customers.customer_name FROM Orders INNER JOIN Customers ON Orders.customer_id = Customers.id;",2024-04-01,138.96,report_viewer,InventoryDB,False,False
+Q0117,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-03-11,208.4,developer,InventoryDB,True,False
+Q0188,"SELECT e.name, d.department_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.id;",2024-06-26,61.93,analyst1,SalesDB,True,False
+Q0082,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-04-08,449.13,analyst1,SalesDB,False,True
+Q0165,UPDATE Products SET price = price * 1.1 WHERE discontinued = 0;,2024-05-20,108.13,analyst1,SalesDB,True,False
+Q0109,SELECT * FROM Orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31';,2024-03-14,265.38,etl_user,FinanceDB,False,False
+Q0111,"SELECT product_id, COUNT(*) as sales_count FROM Sales GROUP BY product_id HAVING COUNT(*) > 100;",2024-02-02,106.96,analyst1,SalesDB,True,False
+Q0025,WITH RecentOrders AS (SELECT * FROM Orders WHERE order_date > '2024-06-01') SELECT * FROM RecentOrders WHERE total > 500;,2024-03-24,37.75,report_viewer,InventoryDB,True,False
+Q0034,"SELECT id, name, department FROM Employees WHERE status = 'active';",2024-06-05,277.29,developer,FinanceDB,False,False
+Q0052,"SELECT department, AVG(salary) FROM Employees GROUP BY department;",2024-02-10,15.4,analyst1,FinanceDB,True,False

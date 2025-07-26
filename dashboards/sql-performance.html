@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Power BI dashboard to visualize and troubleshoot SQL performance metrics including slow queries and scan behavior.">
+  <title>Dashboard: SQL Query Performance | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0V3TFLKV37');
+  </script>
+
+  <!-- Prism.js syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Schema Theory</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+
+    <h2>SQL Query Performance</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Monitor query execution metrics to optimize database performance and reduce system strain.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/sql-performance.png" alt="SQL Query Performance Example" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>Key Metrics</h3>
+      <ul>
+        
+        <li>Top 10 Slowest Queries by Duration</li>
+        <li>Query Count by Day</li>
+        <li>Average Execution Time</li>
+        <li>Index Usage vs. Full Table Scans</li>
+        
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <p>Populate this dashboard with your database’s execution logs (e.g., SQL Server Query Store, Oracle AWR, PostgreSQL logs).</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/sql-performance-dashboard.pbix" class="button">Download PBIX</a>
+        <a href="../assets/downloads/sql-performance-data.csv" class="button">Download Sample Data</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Schema Theory LLC</p>
+    </div>
+  </footer>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+  <script src="../kpi-buttons.js"></script>
+</body>
+</html>
