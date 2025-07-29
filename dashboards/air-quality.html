@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Monitor real-time air quality across North America using this geospatial Power BI dashboard.">
+  <title>Dashboard: Real-Time Air Quality (North America) | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0V3TFLKV37');
+  </script>
+
+  <!-- Prism.js syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Schema Theory</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+
+    <h2>Real-Time Air Quality (North America)</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Monitor current air quality levels across major North American cities using geospatial visuals powered by real-time AQI data from public sources. The dashboard aggregates and highlights pollution hotspots, clean-air zones, and trends across hundreds of monitoring stations.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/air-quality-dashboard.png" alt="Real-Time Air Quality Dashboard Example" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>Key Metrics</h3>
+      <ul>
+        <li>Average AQI (Air Quality Index)</li>
+        <li>Top 10 Worst Stations by AQI</li>
+        <li>Station Count by AQI Bucket (Good, Moderate, Unhealthy, etc.)</li>
+        <li>Geospatial Heatmap of Average AQI across North America</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <p>This dashboard uses a publicly accessible air quality API to retrieve real-time readings from North American monitoring stations. The data is refreshed on load and does not persist across sessions. You may optionally replace the included token with your own by editing the query parameter in Power Query.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/air-quality-dashboard.pbix" class="button">Download PBIX</a>
+        <a href="https://aqicn.org/api/" class="button" target="_blank" rel="noopener noreferrer">Source Data</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Schema Theory LLC</p>
+    </div>
+  </footer>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+  <script src="../kpi-buttons.js"></script>
+</body>
+</html>
