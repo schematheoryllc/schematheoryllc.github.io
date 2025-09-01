@@ -1,0 +1,33 @@
+EventName,EventDescription,PropertyName,Type,Required,Description,ExampleValue,Source,Platforms,MapsToPBIXColumn,Notes
+Signup,User creates an account (or is invited and completes registration),UserId,string,TRUE,Unique user identifier in your system,8a12f3c1,server,"web,iOS,Android",SignupDate,
+Signup,User creates an account (or is invited and completes registration),source,string,TRUE,Acquisition source,web,client,web,SignupDate,"e.g., web, mobile, referral, invite"
+Signup,User creates an account (or is invited and completes registration),plan,string,FALSE,Initial plan or package at signup,Free,server,"web,iOS,Android",SignupDate,
+Signup,User creates an account (or is invited and completes registration),utm_source,string,FALSE,UTM source parameter,google,client,web,SignupDate,
+Signup,User creates an account (or is invited and completes registration),utm_medium,string,FALSE,UTM medium parameter,cpc,client,web,SignupDate,
+Signup,User creates an account (or is invited and completes registration),utm_campaign,string,FALSE,UTM campaign parameter,brand_us_q1,client,web,SignupDate,
+Signup,User creates an account (or is invited and completes registration),referrer_url,string,FALSE,Referring page URL,https://example.com/landing,client,web,SignupDate,
+EmailVerified,User verifies their email address,UserId,string,TRUE,Unique user identifier,8a12f3c1,server,"web,iOS,Android",EmailVerifiedDate,
+EmailVerified,User verifies their email address,method,string,TRUE,Verification method,link,server,"web,iOS,Android",EmailVerifiedDate,"e.g., link, magic_link, otp"
+AppInstalled,Mobile app first install/open event,UserId,string,TRUE,Unique user identifier,8a12f3c1,client,"iOS,Android",AppInstalledDate,
+AppInstalled,Mobile app first install/open event,platform,string,TRUE,Mobile platform,Android,client,"iOS,Android",AppInstalledDate,iOS or Android
+AppInstalled,Mobile app first install/open event,app_version,string,TRUE,App version at install,1.2.3,client,"iOS,Android",AppInstalledDate,
+AppInstalled,Mobile app first install/open event,install_source,string,FALSE,Store or channel of install,PlayStore,client,"iOS,Android",AppInstalledDate,"AppStore, PlayStore, Direct"
+FirstLogin,First successful login after signup,UserId,string,TRUE,Unique user identifier,8a12f3c1,server,"web,iOS,Android",FirstLoginDate,
+FirstLogin,First successful login after signup,method,string,FALSE,Auth method,password,server,"web,iOS,Android",FirstLoginDate,"password, oauth, sso"
+FirstLogin,First successful login after signup,device,string,FALSE,Device type/model,Pixel 7,client,"iOS,Android",FirstLoginDate,
+FirstLogin,First successful login after signup,os_version,string,FALSE,Operating system version,Android 14,client,"iOS,Android",FirstLoginDate,
+FirstLogin,First successful login after signup,app_version,string,FALSE,App version at login,1.2.3,client,"iOS,Android",FirstLoginDate,
+FirstLogin,First successful login after signup,is_first_session,boolean,TRUE,Marks first post-signup session,TRUE,server,"web,iOS,Android",FirstLoginDate,
+FirstValue,First core action indicating the user got initial value,UserId,string,TRUE,Unique user identifier,8a12f3c1,server,"web,iOS,Android",FirstValueDate,
+FirstValue,First core action indicating the user got initial value,feature_name,string,TRUE,Name of the core feature used,CreateDashboard,server,"web,iOS,Android",FirstValueDate,Define per product
+FirstValue,First core action indicating the user got initial value,object_id,string,FALSE,ID of the created/viewed object,dash_1234,server,"web,iOS,Android",FirstValueDate,
+FirstValue,First core action indicating the user got initial value,value_amount,number,FALSE,Optional magnitude of value,1,server,"web,iOS,Android",FirstValueDate,"e.g., files_uploaded=1"
+InviteSent,User sends an invite to teammate or friend,UserId,string,TRUE,Unique user identifier,8a12f3c1,server,"web,iOS,Android",,
+InviteSent,User sends an invite to teammate or friend,invite_method,string,FALSE,How invite was sent,email,server,"web,iOS,Android",,"email, link"
+InviteSent,User sends an invite to teammate or friend,invitee_count,number,FALSE,Number of invitees,1,server,"web,iOS,Android",,
+BillingActivated,User or account converts to paid billing,UserId,string,TRUE,Unique user identifier or account owner,8a12f3c1,server,"web,iOS,Android",,
+BillingActivated,User or account converts to paid billing,plan,string,TRUE,Paid plan name,Pro,server,"web,iOS,Android",,
+BillingActivated,User or account converts to paid billing,amount,number,TRUE,Charge amount,29,server,"web,iOS,Android",,"numeric, pre-tax if applicable"
+BillingActivated,User or account converts to paid billing,billing_cycle,string,TRUE,Billing cadence,monthly,server,"web,iOS,Android",,monthly or annual
+BillingActivated,User or account converts to paid billing,currency,string,TRUE,ISO currency code,USD,server,"web,iOS,Android",,
+BillingActivated,User or account converts to paid billing,coupon,string,FALSE,Applied promo or coupon code,LAUNCH10,server,"web,iOS,Android",,

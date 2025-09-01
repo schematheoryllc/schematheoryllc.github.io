@@ -3,34 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Analyze and improve user onboarding with this Power BI funnel dashboard template.">
-  <title>Dashboard: User Onboarding Funnel | Schema Theory</title>
+  <title>Client & User Onboarding Funnel Template (Power BI) | Schema Theory</title>
+  <meta name="description" content="Free Power BI onboarding funnel template. Tracking plan, SQL/DAX, benchmarks, and a ready-to-use PBIX to visualize drop-offs, TTFV, and conversion." />
+  <link rel="canonical" href="https://schematheoryllc.com/kpi/onboarding-funnel.html" />
   <link rel="stylesheet" href="../schematheory.css" />
-  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>  
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Client & User Onboarding Funnel Template (Power BI)"/>
+  <meta property="og:description" content="Tracking plan + SQL/DAX + PBIX to measure signup→activation, drop-offs, and time-to-first-value."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:image" content="https://schematheoryllc.com/assets/onboarding-funnel.png"/>
+  <meta property="og:url" content="https://schematheoryllc.com/kpi/onboarding-funnel.html"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Client & User Onboarding Funnel Template (Power BI)"/>
+  <meta name="twitter:description" content="Free PBIX + step-by-step guide to build a robust onboarding funnel."/>
+  <meta name="twitter:image" content="https://schematheoryllc.com/assets/onboarding-funnel.png"/>
+
+  <!-- Prism (optional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- JSON-LD: FAQ + HowTo + SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"What is an onboarding funnel?","acceptedAnswer":{"@type":"Answer","text":"A staged view of key milestones from signup to activation to paid, highlighting drop-offs and time-to-first-value."}},
+          {"@type":"Question","name":"Which events should I track?","acceptedAnswer":{"@type":"Answer","text":"Start with Signup, EmailVerified, FirstSession, CoreAction, InviteSent, BillingActivated. Add properties: plan, channel, device, feature_name."}},
+          {"@type":"Question","name":"Does this PBIX work with mobile apps?","acceptedAnswer":{"@type":"Answer","text":"Yes. The model expects an Events table with EventName, EventTime, UserId. Source can be web or mobile telemetry."}}
+        ]
+      },
+      {
+        "@type":"HowTo",
+        "name":"Build an Onboarding Funnel in Power BI",
+        "step":[
+          {"@type":"HowToStep","name":"Connect Data","text":"Load the sample CSV or your events table (UserId, EventName, EventTime)."},
+          {"@type":"HowToStep","name":"Create Measures","text":"Paste the DAX on this page to compute step conversion, drop-offs, and TTFV."},
+          {"@type":"HowToStep","name":"Build the Funnel Visual","text":"Use the Steps table to order stages and bind Users At Step and Conversion %."},
+          {"@type":"HowToStep","name":"Add Segments","text":"Add slicers for Plan, Channel, Device, and Cohort."},
+          {"@type":"HowToStep","name":"Publish & Share","text":"Publish to Power BI Service and set a scheduled refresh."}
+        ]
+      },
+      {
+        "@type":"SoftwareApplication",
+        "name":"Onboarding Funnel Dashboard (PBIX)",
+        "applicationCategory":"BusinessApplication",
+        "downloadUrl":"https://schematheoryllc.com/assets/downloads/onboarding-funnel-dashboard.pbix",
+        "operatingSystem":"Windows",
+        "softwareVersion":"1.0.0",
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0V3TFLKV37');
+    gtag('js', new Date()); gtag('config', 'G-0V3TFLKV37');
   </script>
-
-  <!-- Prism.js syntax highlighting -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Schema Theory</h1>
-      <nav>
+      <h1 class="visually-hidden">Schema Theory</h1>
+      <nav aria-label="Primary">
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../about.html">About</a></li>
           <li><a href="../services.html">Services</a></li>
-          <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+          <li><a href="../kpi.html"><strong>KPIs &amp; Dashboards</strong></a></li>
           <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -40,42 +90,216 @@
   <main class="kpi-main container">
     <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
 
-    <h2>User Onboarding Funnel</h2>
+    <h2>Client &amp; User Onboarding Funnel</h2>
+    <p class="lede">Analyze drop-offs, speed up time-to-first-value, and improve activation with this free Power BI onboarding funnel template, complete with tracking plan, SQL/DAX, and example data.</p>
 
-    <section class="kpi-section">
-      <h3>Description</h3>
-      <p>Track user engagement during onboarding across critical touchpoints.</p>
-    </section>
-
-    <section class="kpi-section">
-      <h3>Visual Example</h3>
-      <img src="../assets/onboarding-funnel.png" alt="User Onboarding Funnel Example" class="kpi-image">
-    </section>
-
-    <section class="kpi-section">
-      <h3>Key Metrics</h3>
+    <aside class="toc" aria-label="Table of contents">
+      <h3>Contents</h3>
       <ul>
-        
-        <li>Signup to Activation Funnel</li>
-        <li>Dropoff Rate by Step</li>
-        <li>Time to First Value (TTFV)</li>
-        <li>Weekly Conversion Trends</li>
-        
+        <li><a href="#what-is">What is an Onboarding Funnel?</a></li>
+        <li><a href="#steps">Recommended Steps & Tracking Plan</a></li>
+        <li><a href="#model">Data Model & Columns</a></li>
+        <li><a href="#dax">DAX Measures</a></li>
+        <li><a href="#benchmarks">Benchmarks & Diagnostics</a></li>
+        <li><a href="#download">Downloads (PBIX, CSV)</a></li>
+        <li><a href="#faq">FAQs</a></li>
       </ul>
+    </aside>
+
+    <section class="kpi-section" id="what-is">
+      <h3>What is an Onboarding Funnel?</h3>
+      <p>An onboarding funnel visualizes how new users move from signup to activation (and beyond), so you can find leaks, reduce friction, and accelerate time-to-first-value (TTFV).</p>
+      <figure>
+        <img src="../assets/onboarding-funnel.png" alt="Example Power BI funnel showing step-by-step conversion and drop-offs" class="kpi-image">
+        <figcaption>Example funnel with conversion, drop-offs, and TTFV.</figcaption>
+      </figure>
     </section>
 
-    <section class="kpi-section">
-      <h3>Usage Notes</h3>
-      <p>This funnel visualization is adaptable to SaaS, mobile, or enterprise onboarding. Customize steps based on your user journey.</p>
+    <section class="kpi-section" id="steps">
+      <h3>Recommended Steps &amp; Tracking Plan</h3>
+      <p>Start with these steps and tailor to your product:</p>
+      <ol>
+        <li>Signup</li>
+        <li>Email Verified</li>
+        <li>First Session</li>
+        <li>Core Action (first value)</li>
+        <li>Invite Sent (if applicable)</li>
+        <li>Billing Activated</li>
+      </ol>
+      <p><a class="button" target="_blank" rel="noopener" href="../assets/downloads/onboarding-tracking-plan.csv">Download Onboarding Funnel Data Schema (CSV)</a></p>
     </section>
 
-    <section class="kpi-section">
+    <section class="kpi-section" id="model">
+      <h3>Data Model &amp; Columns</h3>
+      <p><strong>Events</strong> (fact): UserId, EventName, EventTime, Properties, SessionId<br/>
+         <strong>Users</strong> (dim): UserId, SignupDate, Plan, Channel, Region<br/>
+         <strong>Steps</strong> (dim): StepIndex, StepName, MatchEvent</p>
+      <p>Use <em>Users→Events</em> (1:many) and <em>Steps</em> as an ordering dimension for visuals.</p>
+    </section>
+
+    <section class="kpi-section" id="datastructure">
+      <h3>Data Structure: Simplified vs. Normalized</h3>
+      <p>
+        The downloadable PBIX and sample CSV use a <strong>simplified wide-table format</strong>: one row per user, 
+        with milestone dates in separate columns (<code>SignupDate</code>, <code>EmailVerifiedDate</code>, 
+        <code>AppInstalledDate</code>, <code>FirstLoginDate</code>, <code>FirstValueDate</code>, 
+        plus <code>TTFV_Hours</code> and <code>SignupWeek</code>).
+      </p>
+      <p>
+        This structure makes it easy to plug data directly into Power BI without extra modeling. 
+        In production, many teams prefer a <strong>normalized events table</strong> where each row is 
+        <code>UserId, EventName, EventTime</code>. Both approaches work - the wide table is faster to start, 
+        while the events table is more flexible for additional steps and detailed analysis.
+      </p>
+      <p>
+        If your data is already in an events table, you can pivot it to match the PBIX structure. 
+        Example SQL (Postgres / BigQuery style):
+      </p>
+      <pre><code class="language-sql">
+WITH base AS (
+  SELECT user_id, event_name, event_time
+  FROM events
+  WHERE event_name IN (
+    'Signup','EmailVerified','AppInstalled','FirstLogin','FirstValue'
+  )
+),
+first_hits AS (
+  SELECT user_id, event_name, MIN(event_time) AS first_time
+  FROM base
+  GROUP BY user_id, event_name
+)
+SELECT
+  user_id,
+  MIN(CASE WHEN event_name='Signup' THEN first_time END) AS SignupDate,
+  MIN(CASE WHEN event_name='EmailVerified' THEN first_time END) AS EmailVerifiedDate,
+  MIN(CASE WHEN event_name='AppInstalled' THEN first_time END) AS AppInstalledDate,
+  MIN(CASE WHEN event_name='FirstLogin' THEN first_time END) AS FirstLoginDate,
+  MIN(CASE WHEN event_name='FirstValue' THEN first_time END) AS FirstValueDate
+FROM first_hits
+GROUP BY user_id;
+      </code></pre>
+      <p>
+        This query takes a normalized events table and outputs the same wide format used in the PBIX.
+      </p>
+    </section>
+
+
+    <section class="kpi-section" id="dax">
+      <h3>DAX Measures</h3>
+      <pre><code class="language-clike">
+Logins = 
+CALCULATE(
+    COUNTROWS('onboarding-funnel-data'),
+    NOT(ISBLANK('onboarding-funnel-data'[FirstLoginDate]))
+)
+
+Purchases = 
+CALCULATE(
+    COUNTROWS('onboarding-funnel-data'),
+    NOT(ISBLANK('onboarding-funnel-data'[FirstValueDate]))
+)
+
+Signups = COUNTROWS('onboarding-funnel-data')
+
+Verified Emails = 
+CALCULATE(
+    COUNTROWS('onboarding-funnel-data'),
+    NOT(ISBLANK('onboarding-funnel-data'[EmailVerifiedDate]))
+)
+
+App Installs = 
+CALCULATE(
+    COUNTROWS('onboarding-funnel-data'),
+    NOT(ISBLANK('onboarding-funnel-data'[AppInstalledDate]))
+)
+
+Average TTFV (Hours) = 
+AVERAGEX(
+    FILTER(
+        'onboarding-funnel-data',
+        NOT(ISBLANK('onboarding-funnel-data'[TTFV_Hours]))
+    ),
+    'onboarding-funnel-data'[TTFV_Hours]
+)
+
+Conversion Rate = DIVIDE([Purchases], [Signups])
+
+Days Since Login = AVERAGEX (
+    FILTER ( 'onboarding-funnel-data', NOT ISBLANK ( 'onboarding-funnel-data'[FirstLoginDate] ) ),
+    DATEDIFF ( 'onboarding-funnel-data'[FirstLoginDate], TODAY (), DAY )
+)
+
+Days Since Signup = AVERAGEX (
+    'onboarding-funnel-data',
+    DATEDIFF ( 'onboarding-funnel-data'[SignupDate], TODAY (), DAY )
+)
+
+Dropoff % App → Login = 
+DIVIDE(
+    [App Installs] - [Logins],
+    [App Installs]
+)
+
+Dropoff % Email → App = 
+DIVIDE(
+    [Verified Emails] - [App Installs],
+    [Verified Emails]
+)
+
+Dropoff % Login → Purchase = 
+DIVIDE(
+    [Logins] - [Purchases],
+    [Logins]
+)
+
+Dropoff % Signup → Email = 
+DIVIDE(
+    [Signups] - [Verified Emails],
+    [Signups]
+)      </code></pre>
+    </section>
+
+    <section class="kpi-section" id="benchmarks">
+      <h3>Benchmarks &amp; Diagnostics</h3>
+      <ul>
+        <li><strong>Email Verified / Signup:</strong> 60-90%</li>
+        <li><strong>Activation / Signup:</strong> 20-40% (varies by complexity)</li>
+        <li><strong>TTFV:</strong> &lt; 1 session or &lt; 24 hours is a solid target</li>
+      </ul>
+      <details>
+        <summary>Where is the leak? (checklist)</summary>
+        <ul>
+          <li>Are steps too broad? Split CoreAction by feature.</li>
+          <li>Missing events? Ensure server + client capture.</li>
+          <li>Compare by cohort (signup week), not static dates.</li>
+          <li>Identity resolution? Align user IDs across platforms.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="kpi-section" id="download">
       <h3>Downloads</h3>
       <div class="download-links">
-        <a href="../assets/downloads/onboarding-funnel-dashboard.pbix" class="button">Download PBIX</a>
-        <a href="../assets/downloads/onboarding-funnel-data.csv" class="button">Download Sample Data</a>
+        <a href="../assets/downloads/onboarding-funnel-dashboard.pbix" class="button" target="_blank" rel="noopener">Download PBIX</a>
+        <a href="../assets/downloads/onboarding-funnel-data.csv" class="button" target="_blank" rel="noopener">Sample Data (CSV)</a>
+        <a href="../assets/downloads/onboarding-tracking-plan.csv" class="button" target="_blank" rel="noopener">Onboarding Data Schema (CSV)</a>
+        <a href="../assets/downloads/onboarding-review-checklist.pdf" class="button" target="_blank" rel="noopener">Onboarding Review Checklist (PDF)</a>
       </div>
+      <p class="small">Related KPIs: <a href="../kpi_patterns/kpi-activation-rate.html">Activation Rate</a> · <a href="../kpi_patterns/kpi-retention-curve.html">Retention Curve</a> · <a href="../kpi_patterns/kpi-revenue-churn-rate.html">Revenue Churn</a></p>
     </section>
+
+    <section class="kpi-section" id="faq">
+      <h3>FAQs</h3>
+      <details>
+        <summary>How do I define “Core Action”?</summary>
+        <p>Choose the smallest action that correlates with retention or revenue (e.g., created first dashboard, shared first file).</p>
+      </details>
+      <details>
+        <summary>Can I use this with mobile SDKs?</summary>
+        <p>Yes - export events into the Events table with the same columns and it will work.</p>
+      </details>
+    </section>
+    <p></p><p></p>
   </main>
 
   <footer>
@@ -84,6 +308,5 @@
     </div>
   </footer>
   <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
-  
 </body>
 </html>

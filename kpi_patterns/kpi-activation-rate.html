@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Calculate Activation Rate to measure the percentage of new signups who complete a key activation action within a set time window. Includes DAX, SQL, and examples.">
+  <title>KPI: Activation Rate | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0V3TFLKV37');</script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dax.min.js"></script>
+</head>
+<body>
+  <header><div class="container">
+      <h1>Schema Theory</h1>
+      <nav><ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul></nav>
+    </div></header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+    <h2>Activation Rate</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>Activation Rate measures the percentage of newly registered users who complete a defined "activation" action within a chosen time window (e.g., 7 days). This action should represent a user reaching first value - such as first login, app install and login, email verification, or the first time they perform your core value action.</p>
+      <p><strong>Recommended category:</strong> <em>Customer</em> (Acquisition &amp; Onboarding).</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-activation_rate.png" alt="Activation Rate Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Formula</h3>
+      <p>The measures below define an <em>ActivationDate</em> as the earliest of several milestone dates, then compute the portion of signups in a period that activated within <code>Activation Window (Days)</code> (default 7).</p>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">-- Parameter (can be a disconnected table or a simple constant)
+Activation Window (Days) = 7
+
+-- Derived column: activation date (earliest milestone)
+ActivationDate =
+VAR DatesToConsider = {
+    'onboarding-funnel-data'[FirstLoginDate],
+    'onboarding-funnel-data'[EmailVerifiedDate],
+    'onboarding-funnel-data'[AppInstalledDate],
+    'onboarding-funnel-data'[FirstValueDate]
+}
+RETURN
+MINX(
+    FILTER(
+        {
+            ( 'onboarding-funnel-data'[FirstLoginDate] ),
+            ( 'onboarding-funnel-data'[EmailVerifiedDate] ),
+            ( 'onboarding-funnel-data'[AppInstalledDate] ),
+            ( 'onboarding-funnel-data'[FirstValueDate] )
+        },
+        NOT ( ISBLANK ( [Value] ) )
+    ),
+    [Value]
+)
+
+-- Signups in the selected period (by Date table)
+Signups =
+CALCULATE (
+    COUNTROWS ( 'onboarding-funnel-data' ),
+    FILTER (
+        'onboarding-funnel-data',
+        NOT ( ISBLANK ( 'onboarding-funnel-data'[SignupDate] ) )
+    ),
+    KEEPFILTERS ( VALUES ( 'Date'[Date] ) )
+)
+
+-- Activated signups (activated within N days of signup)
+Activated Signups =
+VAR WindowDays = [Activation Window (Days)]
+RETURN
+CALCULATE (
+    COUNTROWS ( 'onboarding-funnel-data' ),
+    FILTER (
+        'onboarding-funnel-data',
+        NOT ( ISBLANK ( 'onboarding-funnel-data'[SignupDate] ) ) &&
+        NOT ( ISBLANK ( [ActivationDate] ) ) &&
+        [ActivationDate] >= 'onboarding-funnel-data'[SignupDate] &&
+        [ActivationDate] &lt;= 'onboarding-funnel-data'[SignupDate] + WindowDays
+    ),
+    KEEPFILTERS ( VALUES ( 'Date'[Date] ) )
+)
+
+-- Activation Rate
+Activation Rate =
+DIVIDE ( [Activated Signups], [Signups] )</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+
+      <p><em>Notes:</em> If you prefer a single canonical activation event (e.g., first login), replace the <code>ActivationDate</code> logic with that event's date only. You can also make the window a slicer parameter (7/14/28 days) via a disconnected table.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>SQL Example</h3>
+      <p>This SQL computes the earliest milestone per user, then calculates the activation status for signups in each month using a 7-day window.</p>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">WITH base AS (
+  SELECT
+    user_id,
+    SignupDate,
+    LEAST(
+      NULLIF(FirstLoginDate,    DATE '0001-01-01'),
+      NULLIF(EmailVerifiedDate, DATE '0001-01-01'),
+      NULLIF(AppInstalledDate,  DATE '0001-01-01'),
+      NULLIF(FirstValueDate,    DATE '0001-01-01')
+    ) AS ActivationDate
+  FROM onboarding_funnel_data
+),
+labeled AS (
+  SELECT
+    user_id,
+    DATE_TRUNC('month', SignupDate)::date AS signup_month,
+    SignupDate,
+    ActivationDate,
+    CASE
+      WHEN ActivationDate IS NOT NULL
+           AND ActivationDate &gt;= SignupDate
+           AND ActivationDate &lt;= SignupDate + INTERVAL '7 day'
+      THEN 1 ELSE 0
+    END AS activated_within_7d
+  FROM base
+  WHERE SignupDate IS NOT NULL
+)
+SELECT
+  signup_month,
+  COUNT(*) AS signups,
+  SUM(activated_within_7d) AS activated_signups,
+  CASE WHEN COUNT(*) = 0 THEN NULL
+       ELSE SUM(activated_within_7d)::decimal / COUNT(*)
+  END AS activation_rate
+FROM labeled
+GROUP BY 1
+ORDER BY 1;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li><strong>Define "activation" precisely</strong> (first value moment). Avoid using vanity milestones that don't correlate with retention or revenue.</li>
+        <li><strong>Choose a window</strong> (commonly 7 days; sometimes 1, 14, or 28) that reflects your product's typical time-to-value.</li>
+        <li><strong>Segment</strong> by acquisition channel, device, cohort, or region to find optimization opportunities.</li>
+        <li><strong>Pair with Retention Curve</strong> to ensure activated users remain active over time.</li>
+        <li><strong>Quality check:</strong> verify that milestone timestamps are in the same timezone and free of backfills that could bias the window logic.</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-activation_rate.pbix" class="button" target="_blank" rel="noopener">Download PBIX</a>
+        <a href="../assets/downloads/onboarding-funnel-data.csv" class="button" target="_blank" rel="noopener">Download Sample Data</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
+    </div></footer>
+  <script src="kpi-buttons.js"></script>
+</body>
+</html>

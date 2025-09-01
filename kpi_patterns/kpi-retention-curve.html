@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Visualize Retention Curves to measure what percentage of users remain active over time after signup. Includes DAX, SQL, and examples.">
+  <title>KPI: Retention Curve | Schema Theory</title>
+  <link rel="stylesheet" href="../schematheory.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3TFLKV37"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0V3TFLKV37');</script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dax.min.js"></script>
+</head>
+<body>
+  <header><div class="container">
+      <h1>Schema Theory</h1>
+      <nav><ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../kpi.html"><b>KPIs &amp; Dashboards</b></a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul></nav>
+    </div></header>
+
+  <main class="kpi-main container">
+    <a class="back-link" href="../kpi.html">&larr; Back to KPIs &amp; Dashboards</a>
+    <h2>Retention Curve</h2>
+
+    <section class="kpi-section">
+      <h3>Description</h3>
+      <p>The Retention Curve shows what percentage of a user cohort continues to be active after signup, measured at regular intervals (e.g., Day 1, Day 7, Day 30). It helps evaluate long-term engagement, product stickiness, and user loyalty.</p>
+      <p><strong>Recommended category:</strong> <em>Customer</em> (Engagement &amp; Retention).</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Visual Example</h3>
+      <img src="../assets/kpi-retention_curve.png" alt="Retention Curve Visual" class="kpi-image">
+    </section>
+
+    <section class="kpi-section">
+      <h3>DAX Example</h3>
+      <p>This example computes Day N retention (% of a signup cohort active N days later). Assume <code>UserActivity</code> with <code>[UserId]</code> and <code>[ActivityDate]</code>, and <code>Signups</code> with <code>[UserId]</code> and <code>[SignupDate]</code>.</p>
+      <div class="code-toolbar">
+        <pre><code class="language-dax">Retention % (Day N) =
+VAR N = SELECTEDVALUE('Retention Days'[Day]) -- slicer table with values 1,7,30,...
+VAR Cohort = VALUES(Signups[UserId])
+VAR SignupsInCohort =
+    CALCULATETABLE(
+        Signups,
+        Cohort
+    )
+VAR ActiveAtN =
+    CALCULATETABLE(
+        DISTINCT(UserActivity[UserId]),
+        FILTER(
+            UserActivity,
+            UserActivity[ActivityDate] =
+                MAX(Signups[SignupDate]) + N
+        )
+    )
+RETURN
+DIVIDE(
+    COUNTROWS( INTERSECT(Cohort, ActiveAtN) ),
+    COUNTROWS(Cohort)
+)</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+      <p><em>Notes:</em> This pattern works well with a "Retention Days" disconnected table so you can slice by Day 1, 7, 30. You can also build a full curve visual by plotting <code>N</code> on the X-axis and Retention % on the Y-axis.</p>
+    </section>
+
+    <section class="kpi-section">
+      <h3>SQL Example</h3>
+      <p>This SQL calculates retention for cohorts by signup month and retention day.</p>
+      <div class="code-toolbar">
+        <pre><code class="language-sql">WITH cohorts AS (
+  SELECT
+    u.UserId,
+    DATE_TRUNC('month', s.SignupDate)::date AS cohort_month,
+    s.SignupDate
+  FROM Signups s
+  JOIN Users u ON u.UserId = s.UserId
+),
+activity_lag AS (
+  SELECT
+    c.cohort_month,
+    c.UserId,
+    DATE_PART('day', a.ActivityDate - c.SignupDate) AS days_since_signup
+  FROM cohorts c
+  JOIN UserActivity a
+    ON a.UserId = c.UserId
+   AND a.ActivityDate &gt;= c.SignupDate
+),
+retention AS (
+  SELECT
+    cohort_month,
+    days_since_signup,
+    COUNT(DISTINCT UserId) AS active_users
+  FROM activity_lag
+  GROUP BY 1,2
+)
+SELECT
+  r.cohort_month,
+  r.days_since_signup,
+  r.active_users,
+  COUNT(DISTINCT c.UserId) AS cohort_size,
+  r.active_users::decimal / COUNT(DISTINCT c.UserId) AS retention_rate
+FROM retention r
+JOIN cohorts c ON r.cohort_month = c.cohort_month
+GROUP BY 1,2,r.active_users
+ORDER BY 1,2;</code></pre>
+        <div class="toolbar">
+          <button class="copy-button" onclick="copyCode(this)">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Usage Notes</h3>
+      <ul>
+        <li>Retention curves typically decline steeply at first (Day 1 → Day 7), then flatten. The shape tells you how sticky your product is.</li>
+        <li>Compare curves across cohorts (signup month, acquisition channel, geography) to diagnose retention problems.</li>
+        <li>Pair with <em>Activation Rate</em> for a full picture of user lifecycle: how many get started and how many stay.</li>
+        <li>Common intervals: Day 1, 7, 14, 30, 60, 90. Choose based on your product cycle.</li>
+      </ul>
+    </section>
+
+    <section class="kpi-section">
+      <h3>Downloads</h3>
+      <div class="download-links">
+        <a href="../assets/downloads/kpi-retention_curve.pbix" class="button" target="_blank" rel="noopener">Download PBIX</a>
+        <a href="../assets/downloads/kpi-retention_curve.csv" class="button" target="_blank" rel="noopener">Download Sample Data</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">
+      <p>&copy; Schema Theory LLC. All rights reserved.</p>
+    </div></footer>
+  <script src="kpi-buttons.js"></script>
+</body>
+</html>
